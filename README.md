@@ -1,4 +1,4 @@
-# 🏓 HitZone SPARC - Premier Pickleball Courts & Community
+# HitZone SPARC - Premier Pickleball Courts & Community
 
 A modern, responsive website for HitZone SPARC - Salem's premier pickleball destination. Built with HTML5, CSS3, and vanilla JavaScript, featuring a sleek design, interactive elements, and seamless user experience.
 
