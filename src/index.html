@@ -71,11 +71,8 @@
                 <li role="none"><a href="#amenities" class="hz-nav-link" role="menuitem">Amenities</a></li>
                 <li role="none"><a href="#events" class="hz-nav-link" role="menuitem">Events</a></li>
             </ul>
-            <button class="hz-hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
-                <span class="hz-bar" aria-hidden="true"></span>
-                <span class="hz-bar" aria-hidden="true"></span>
-                <span class="hz-bar" aria-hidden="true"></span>
-            </button>
+            <div class="hz-hamburger-container">
+            <button class="hz-hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu"></button>
         </div>
     </nav>
 
@@ -143,7 +140,7 @@
                 <div class="hz-booking-info scroll-animate fade-up delay-200">
                     <div class="hz-info-item">
                         <i class="fas fa-clock" aria-hidden="true"></i>
-                        <span>Open daily | 6 AM – 10 PM</span>
+                        <span>Open daily | 6 AM – 11 PM</span>
                     </div>
                     <div class="hz-info-item">
                         <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
@@ -160,7 +157,7 @@
                         </div>
                         <div class="hz-form-group">
                             <label for="phone">Mobile Number <span aria-label="required">*</span></label>
-                            <input type="tel" id="phone" name="phone" placeholder="Enter 10-digit number" maxlength="10" required aria-describedby="phone-error" autocomplete="tel">
+                            <input type="tel" id="phone" name="phone" placeholder="Enter 10-digit number" maxlength="15" required aria-describedby="phone-error" autocomplete="tel" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
                             <div id="phone-error" class="error-message" role="alert" aria-live="polite"></div>
                         </div>
                         <div class="hz-form-row">
@@ -192,16 +189,6 @@
                                 </select>
                                 <div id="time-error" class="error-message" role="alert" aria-live="polite"></div>
                             </div>
-                        </div>
-                        <div class="hz-form-group">
-                            <label for="duration">Duration <span aria-label="required">*</span></label>
-                            <select id="duration" name="duration" required aria-describedby="duration-error">
-                                <option value="">Select Duration</option>
-                                <option value="1">1 Hour</option>
-                                <option value="2">2 Hours</option>
-                                <option value="3">3 Hours</option>
-                            </select>
-                            <div id="duration-error" class="error-message" role="alert" aria-live="polite"></div>
                         </div>
                         <div class="hz-form-group">
                             <label for="players">Number of Players <span aria-label="required">*</span></label>
@@ -353,10 +340,6 @@
               </div>
             
           </div>
-      
-          <!-- <div class="hz-center scroll-animate fade-up delay-300">
-            <button class="hz-btn hz-btn-primary large-cta hz-whatsapp-btn" data-membership="true">Enroll via Whatsapp</button>
-          </div> -->
         </div>
       </section>
       
@@ -498,7 +481,7 @@
                         </span>
                       
                         <span class="hz-social-media-item">
-                          <a href="https://www.youtube.com/hitzonesparc" target="_blank" rel="noopener" aria-label="Hitzone on YouTube">
+                          <a href="https://www.youtube.com/@HitZoneSPARC" target="_blank" rel="noopener" aria-label="Hitzone on YouTube">
                             <svg class="hz-icon hz-icon-yt" role="img" aria-hidden="true"><use href="#hz-yt-icon"></use></svg>
                             <span class="sr-only">YouTube</span>
                           </a>
