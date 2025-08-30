@@ -214,10 +214,8 @@ label, li, ul, ol {
     height: 70px;
 }
 
-.hz-nav-logo h2 {
-    color: var(--hz-cta-primary);
-    font-weight: 700;
-    font-size: 1.5rem;
+.hz-nav-logo img {
+   width: 80%;
 }
 
 .hz-nav-menu {
@@ -1599,6 +1597,9 @@ section {
 }
 
 @media (max-width: 480px) {
+    .hz-nav-logo img {
+        width: 70%;
+    }
     .hz-btn {
         padding: 10px 15px;
         font-size: 0.9rem;
