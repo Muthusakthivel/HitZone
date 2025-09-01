@@ -276,7 +276,7 @@ label, li, ul, ol {
     background-repeat: no-repeat;
     background-position: 0 0;
     background-size: 44px 44px;
-    background-image: url("./assets/images/hz-hamburger.png");
+    background-image: url("/assets/images/hz-hamburger.png");
     transition: .5s ease-in-out;
     background-color: transparent; /* removes white/gray bg */
     border: none; /* removes border */
@@ -1680,7 +1680,7 @@ section {
     }
 } 
 
-@media (max-width: 380px) {
+@media (max-width: 400px) {
     .hz-btn {
         padding: 10px 15px;
     }
