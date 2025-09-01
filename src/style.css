@@ -276,7 +276,7 @@ label, li, ul, ol {
     background-repeat: no-repeat;
     background-position: 0 0;
     background-size: 44px 44px;
-    background-image: url("/assets/images/hz-hamburger.png");
+    background-image: url("/assets/images/hz-hamburger-menu-close.svg");
     transition: .5s ease-in-out;
     background-color: transparent; /* removes white/gray bg */
     border: none; /* removes border */
