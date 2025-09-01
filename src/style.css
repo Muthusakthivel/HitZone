@@ -189,6 +189,9 @@ label, li, ul, ol {
 .hz-paddingtopbottom-small {
     padding: 30px 0;
 }
+.hz-text-left {
+    text-align: left;
+}
 
 /* Navigation */
 .hz-navbar {
@@ -973,12 +976,6 @@ section {
     color: #eee;
 }
 
-/* .hz-tick-icon {
-    width: 20px;
-    height: 20px;
-    object-fit: contain;
-} */
-
 .hz-plan-button-container {
     margin-top: 20px;
     padding-top: 20px;
@@ -1656,6 +1653,18 @@ section {
         margin-bottom: 3rem;
     }
 
+    /* Coming Soon Badge Mobile Responsive */
+    .hz-coming-soon-badge {
+        font-size: 0.6rem;
+        padding: 1px 6px;
+        margin-left: 8px;
+    }
+
+    .hz-feature-disabled {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
     /* Gear section mobile optimization */
     .hz-first-time-image {
         margin-bottom: 20px;
@@ -1675,6 +1684,10 @@ section {
     .hz-btn {
         padding: 10px 15px;
     }
+    .hz-btn-full {
+        width: 50%;
+    }
+  
 }
 
 /* Custom cursor for clickable elements */
