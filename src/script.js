@@ -298,7 +298,103 @@ const CONFIG = {
     const dateInput = document.getElementById('date');
     if (dateInput) dateInput.min = new Date().toISOString().split('T')[0];
   };
+
+  // ---------- Tournament Data from Google Sheets ----------
+  const loadTournamentData = async () => {
+    try {
+      // 🔗 REPLACE THIS URL WITH YOUR GOOGLE SHEETS CSV URL
+      // Get this URL from: File → Share → Publish to web → CSV format
+      const SHEET_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSA-ODDFMr6nbrlb65eaTGPvUaNWWusNVRGv4QLq95mlnmo4xt5Ahrs0wzF3qjUNdRX65qC1RG9-P8g/pub?output=csv';
+      
+      const response = await fetch(SHEET_URL);
+      const csvText = await response.text();
+      
+      // Parse CSV data
+      const tournaments = parseCSV(csvText);
+      
+      // Update the tournament table
+      updateTournamentTable(tournaments);
+      
+    } catch (error) {
+      console.error('❌ Error loading tournament data from Google Sheets:', error);
+      console.log('💡 Make sure you have:');
+      console.log('   1. Published your Google Sheet as CSV');
+      console.log('   2. Updated the SHEET_URL in the code');
+      console.log('   3. Made the sheet publicly accessible');
+      // Fallback to static data if API fails
+      console.log('📋 Using fallback tournament data');
+    }
+  };
+
+  const parseCSV = (csvText) => {
+    const lines = csvText.split('\n');
+    const tournaments = [];
+    
+    // Skip header row (index 0)
+    for (let i = 1; i < lines.length; i++) {
+      const line = lines[i].trim();
+      if (line) {
+        const columns = line.split(',').map(col => col.replace(/"/g, '').trim());
+        
+        if (columns.length >= 5) {
+          tournaments.push({
+            name: columns[0],        // EVENT NAME
+            club: columns[1],        // CLUB NAME
+            date: columns[2],        // DATE
+            time: columns[3],        // TIME
+            location: columns[4],    // LOCATION
+          });
+        }
+      }
+    }
+    
+    return tournaments;
+  };
+
+  const updateTournamentTable = (tournaments) => {
+    const tableBody = document.querySelector('.hz-tournament-table-content tbody');
+    if (!tableBody) return;
+
+    // Clear existing rows
+    tableBody.innerHTML = '';
+
+    // Add new tournament rows
+    tournaments.forEach((tournament, index) => {
+      const row = document.createElement('tr');
+      
+      const colorClass = getColorClass(tournament.color, index);
+      
+      row.innerHTML = `
+        <td>
+          <div class="hz-tournament-row">
+            <div class="hz-tournament-dot ${colorClass}"></div>
+            <span>${tournament.name}</span>
+          </div>
+        </td>
+        <td>${tournament.club}</td>
+        <td>${tournament.date}</td>
+        <td>${tournament.time}</td>
+        <td>${tournament.location}</td>
+      `;
+      
+      tableBody.appendChild(row);
+    });
+  };
+
+  const getColorClass = (color, index) => {
+    const colorMap = {
+      'purple': 'hz-dot-purple',
+      'blue': 'hz-dot-blue', 
+      'green': 'hz-dot-green',
+      'red': 'hz-dot-purple',
+      'orange': 'hz-dot-blue',
+      'yellow': 'hz-dot-green'
+    };
+    
+    return colorMap[color] || ['hz-dot-purple', 'hz-dot-blue', 'hz-dot-green'][index % 3];
+  };
   
+
   // ---------- Init ----------
   document.addEventListener('DOMContentLoaded', () => {
     initMobileNav();
@@ -311,5 +407,6 @@ const CONFIG = {
     initFormAnimations();
     setMinDate();
     populateTimeOptions();
+    loadTournamentData();
   });
   
