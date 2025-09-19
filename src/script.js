@@ -196,23 +196,33 @@ const CONFIG = {
     const timeSelect = document.getElementById('time');
     const dateInput = document.getElementById('date');
     if (!timeSelect || !dateInput) return;
-  
+
     const updateTimes = () => {
       const now = new Date();
       const today = now.toISOString().split('T')[0];
       const selected = dateInput.value;
       const disableBefore = (selected === today) ? now.getHours() : -1;
-  
+
       timeSelect.innerHTML = `<option value="">Select Time</option>`;
       for (let h = 0; h < 24; h++) {
         const val = `${String(h).padStart(2, '0')}:00`;
-        const option = new Option(val, val);
+        const displayTime = formatTime12Hour(val);
+        const option = new Option(displayTime, val);
         if (disableBefore !== -1 && h <= disableBefore) option.disabled = true;
         timeSelect.appendChild(option);
       }
     };
     dateInput.addEventListener('change', updateTimes);
     updateTimes();
+  };
+
+  // ---------- Time Formatting ----------
+  const formatTime12Hour = (time24) => {
+    const [hours, minutes] = time24.split(':');
+    const hour = parseInt(hours, 10);
+    const ampm = hour >= 12 ? 'PM' : 'AM';
+    const hour12 = hour === 0 ? 12 : hour > 12 ? hour - 12 : hour;
+    return `${hour12}:${minutes} ${ampm}`;
   };
   
   // ---------- Booking Form ----------
@@ -259,7 +269,8 @@ const CONFIG = {
         btn.disabled = false;
   
         const playersText = data.players === '1' ? '1 Player' : `${data.players} Players`;
-        const message = `*New Court Booking Request*\n\n*Name:* ${data.name}\n*Phone:* ${data.phone}\n*Date:* ${new Date(data.date).toLocaleDateString()}\n*Time:* ${data.time}\n*Players:* ${playersText}\n\nPlease confirm this booking.`;
+        const formattedTime = formatTime12Hour(data.time);
+        const message = `*New Court Booking Request*\n\n*Name:* ${data.name}\n*Phone:* ${data.phone}\n*Date:* ${new Date(data.date).toLocaleDateString()}\n*Time:* ${formattedTime}\n*Players:* ${playersText}\n\nPlease confirm this booking.`;
   
         openWhatsApp(message);
       }, 2000);
