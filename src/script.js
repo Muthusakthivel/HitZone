@@ -337,28 +337,51 @@ const CONFIG = {
     }
   };
 
+  const splitCSVLine = (line) => {
+    const result = [];
+    let current = '';
+    let inQuotes = false;
+    for (let i = 0; i < line.length; i++) {
+      const char = line[i];
+      if (char === '"') {
+        // Toggle quoting; handle escaped quotes by doubling
+        if (inQuotes && line[i + 1] === '"') {
+          current += '"';
+          i++; // skip the escaped quote
+        } else {
+          inQuotes = !inQuotes;
+        }
+      } else if (char === ',' && !inQuotes) {
+        result.push(current);
+        current = '';
+      } else {
+        current += char;
+      }
+    }
+    result.push(current);
+    return result.map(col => col.trim());
+  };
+
   const parseCSV = (csvText) => {
     const lines = csvText.split('\n');
     const tournaments = [];
-    
     // Skip header row (index 0)
     for (let i = 1; i < lines.length; i++) {
-      const line = lines[i].trim();
-      if (line) {
-        const columns = line.split(',').map(col => col.replace(/"/g, '').trim());
-        
-        if (columns.length >= 5) {
-          tournaments.push({
-            name: columns[0],        // EVENT NAME
-            club: columns[1],        // CLUB NAME
-            date: columns[2],        // DATE
-            time: columns[3],        // TIME
-            location: columns[4],    // LOCATION
-          });
-        }
+      const rawLine = lines[i];
+      if (!rawLine) continue;
+      const line = rawLine.replace(/\r$/, '').trim();
+      if (!line) continue;
+      const columns = splitCSVLine(line).map(col => col.replace(/^\"|\"$/g, '').replace(/\r/g, '').trim());
+      if (columns.length >= 5) {
+        tournaments.push({
+          name: columns[0],        // EVENT NAME
+          club: columns[1],        // CLUB NAME
+          date: columns[2],        // DATE
+          time: columns[3],        // TIME
+          location: columns[4],    // LOCATION
+        });
       }
     }
-    
     return tournaments;
   };
 
