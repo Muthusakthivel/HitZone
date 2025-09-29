@@ -367,7 +367,6 @@ label, li, ul, ol {
     width: 100%;
     height: auto;
     display: block;
-    aspect-ratio: 1200 / 675;
 }
 
 /* Buttons */
