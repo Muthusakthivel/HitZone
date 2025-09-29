@@ -224,6 +224,19 @@ const CONFIG = {
     const hour12 = hour === 0 ? 12 : hour > 12 ? hour - 12 : hour;
     return `${hour12}:${minutes} ${ampm}`;
   };
+
+  // ---------- Pricing Helpers ----------
+  const getRateTextFromDate = (isoDate) => {
+    try {
+      const d = new Date(isoDate);
+      if (Number.isNaN(d.getTime())) return 'Weekday';
+      const dow = d.getDay(); // 0 Sun, 6 Sat
+      const isWeekend = dow === 0 || dow === 6;
+      return isWeekend ? 'Weekend (₹700/hour)' : 'Weekday (₹600/hour)';
+    } catch {
+      return 'Weekday';
+    }
+  };
   
   // ---------- Booking Form ----------
   const initBookingForm = () => {
@@ -270,7 +283,8 @@ const CONFIG = {
   
         const playersText = data.players === '1' ? '1 Player' : `${data.players} Players`;
         const formattedTime = formatTime12Hour(data.time);
-        const message = `*New Court Booking Request*\n\n*Name:* ${data.name}\n*Phone:* ${data.phone}\n*Date:* ${new Date(data.date).toLocaleDateString()}\n*Time:* ${formattedTime}\n*Players:* ${playersText}\n\nPlease confirm this booking.`;
+        const rateText = getRateTextFromDate(data.date);
+        const message = `*New Court Booking Request*\n\n*Name:* ${data.name}\n*Phone:* ${data.phone}\n*Date:* ${new Date(data.date).toLocaleDateString()}\n*Time:* ${formattedTime}\n*Rate:* ${rateText}\n*Players:* ${playersText}\n\nPlease confirm this booking.`;
   
         openWhatsApp(message);
       }, 2000);
@@ -308,6 +322,31 @@ const CONFIG = {
   const setMinDate = () => {
     const dateInput = document.getElementById('date');
     if (dateInput) dateInput.min = new Date().toISOString().split('T')[0];
+  };
+
+  // ---------- Dynamic Pricing ----------
+  const initDynamicPricing = () => {
+    const dateInput = document.getElementById('date');
+    const priceChip = document.getElementById('priceChip');
+    if (!dateInput || !priceChip) return;
+    
+    const updatePricing = (selectedDate) => {
+      if (!selectedDate) return;
+      
+      const date = new Date(selectedDate);
+      const dayOfWeek = date.getDay(); // 0 = Sunday, 1 = Monday, ..., 6 = Saturday
+      const isWeekend = dayOfWeek === 0 || dayOfWeek === 6; // Sunday or Saturday
+      
+      const text = isWeekend ? '₹700/hour • Weekend' : '₹600/hour • Weekday';
+      priceChip.textContent = text;
+    };
+    
+    dateInput.addEventListener('change', (e) => {
+      updatePricing(e.target.value);
+    });
+    
+    // Initialize based on today's date or default text
+    updatePricing(dateInput.value || new Date().toISOString().split('T')[0]);
   };
 
   // ---------- Tournament Data from Google Sheets ----------
@@ -392,6 +431,19 @@ const CONFIG = {
     // Clear existing rows
     tableBody.innerHTML = '';
 
+    // Empty state message
+    if (!Array.isArray(tournaments) || tournaments.length === 0) {
+      const row = document.createElement('tr');
+      const cell = document.createElement('td');
+      cell.colSpan = 5;
+      cell.style.textAlign = 'center';
+      cell.style.padding = '1.5rem';
+      cell.textContent = 'No tournaments scheduled at the moment. Please check back soon.';
+      row.appendChild(cell);
+      tableBody.appendChild(row);
+      return;
+    }
+
     // Add new tournament rows
     tournaments.forEach((tournament, index) => {
       const row = document.createElement('tr');
@@ -442,5 +494,6 @@ const CONFIG = {
     setMinDate();
     populateTimeOptions();
     loadTournamentData();
+    initDynamicPricing();
   });
   

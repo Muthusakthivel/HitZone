@@ -104,7 +104,7 @@
                     </div>
                 </div>
                 <div class="hz-hero-image">
-                    <img src="/assets/images/hz-header.png" alt="HitZone SPARC pickleball courts with players enjoying the game" loading="eager">
+                    <img src="/assets/images/hz-header.png" alt="HitZone SPARC pickleball courts with players enjoying the game" loading="eager" width="1200" height="675">
                 </div>
              </div>
         </section>
@@ -160,6 +160,8 @@
                     </div>
                 </div>
 
+                <!-- Inline Price Chip (next to Date) -->
+
                 <div class="hz-booking-form-container scroll-animate fade-up delay-300">
                     <form class="hz-booking-form" id="bookingForm" novalidate>
                         <div class="hz-form-group">
@@ -174,7 +176,9 @@
                         </div>
                         <div class="hz-form-row">
                             <div class="hz-form-group">
-                                <label for="date">Date <span aria-label="required">*</span></label>
+                                <label for="date">Date <span aria-label="required">*</span>
+                                  <span id="priceChip" class="hz-price-chip" aria-live="polite">₹600/hour • Weekday</span>
+                                </label>
                                 <input type="date" id="date" name="date" required aria-describedby="date-error">
                                 <div id="date-error" class="error-message" role="alert" aria-live="polite"></div>
                             </div>
@@ -558,4 +562,4 @@
 
     <script src="script.js"></script>
 </body>
-</html> 
+</html>

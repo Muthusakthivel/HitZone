@@ -90,6 +90,7 @@ body {
     }
 }
 
+/* removed sticky rate bar */
 /* Main content focus management for accessibility */
 #main-content:focus {
     outline: none;
@@ -364,6 +365,9 @@ label, li, ul, ol {
 
 .hz-hero-image img {
     width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 1200 / 675;
 }
 
 /* Buttons */
@@ -440,6 +444,14 @@ section {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+}
+
+/* Price chip next to label */
+.hz-price-chip {
+    color: var(--hz-cta-primary);
+    padding: 2px;
+    font-size: 0.9rem;
+    margin-left: 10px;
 }
 
 /* Custom Scroll Animations */
@@ -581,6 +593,138 @@ section {
     color: var(--hz-text-primary);
 }
 
+/* removed old pricing segmented toggle */
+
+/* Dynamic Pricing Display */
+.hz-pricing-display {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    text-align: center;
+}
+
+.hz-pricing-header h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--hz-text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.hz-pricing-date-info {
+    margin-bottom: 2rem;
+}
+
+#selectedDateText {
+    color: var(--hz-text-secondary);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.hz-pricing-cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.hz-pricing-card {
+    background: var(--hz-bg-secondary);
+    border-radius: 20px;
+    padding: 2rem 1.5rem;
+    min-width: 200px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.hz-pricing-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(135deg, var(--hz-cta-primary), var(--hz-cta-secondary));
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.hz-pricing-card.active::before {
+    transform: scaleX(1);
+}
+
+.hz-pricing-card.active {
+    border-color: var(--hz-cta-primary);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(255, 79, 24, 0.2);
+}
+
+.hz-pricing-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hz-pricing-type {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--hz-text-primary);
+    margin-bottom: 1rem;
+}
+
+.hz-pricing-amount {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 0.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.hz-currency {
+    font-size: 1.2rem;
+    color: var(--hz-cta-primary);
+    font-weight: 600;
+}
+
+.hz-price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--hz-text-primary);
+}
+
+.hz-period {
+    font-size: 1rem;
+    color: var(--hz-text-secondary);
+    font-weight: 500;
+}
+
+.hz-pricing-details {
+    color: var(--hz-text-secondary);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.hz-pricing-highlight {
+    display: flex;
+    justify-content: center;
+}
+
+.hz-pricing-badge {
+    background: linear-gradient(135deg, var(--hz-cta-primary), var(--hz-cta-secondary));
+    color: white;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 15px rgba(255, 79, 24, 0.3);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
 .hz-booking-info {
     display: flex;
     justify-content: center;
@@ -635,6 +779,8 @@ section {
     flex-direction: column;
     position: relative;
 }
+
+/* removed old inline date-with-chip layout (replaced with label chip) */
 
 .hz-form-row {
     display: grid;
