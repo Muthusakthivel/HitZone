@@ -238,6 +238,29 @@ const CONFIG = {
     }
   };
   
+  // ---------- Google Sheets Integration ----------
+  const submitToGoogleSheets = async (bookingData) => {
+    try {
+      // 🔗 REPLACE WITH YOUR GOOGLE SHEETS WEB APP URL
+      const GOOGLE_SHEETS_URL = 'https://script.google.com/a/macros/hitzonesparc.com/s/AKfycbz5aYzAOKZLduxSUkQ00vGHN5VgG8ZXDn8-XRDRtzvmhxS04OMbaUOrDnD048I34VpGQw/exec';
+      
+      const response = await fetch(GOOGLE_SHEETS_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(bookingData)
+      });
+      
+      console.log('✅ Booking data saved to Google Sheets');
+      return true;
+    } catch (error) {
+      console.error('❌ Error saving to Google Sheets:', error);
+      return false;
+    }
+  };
+
   // ---------- Booking Form ----------
   const initBookingForm = () => {
     const form = document.getElementById('bookingForm');
@@ -265,29 +288,62 @@ const CONFIG = {
       });
     }
   
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
       if (!validateBookingForm(form)) return;
-  
+
       const data = Object.fromEntries(new FormData(form).entries());
       const btn = form.querySelector('button[type="submit"]');
       const original = btn.textContent;
-  
+
       btn.innerHTML = '<span class="loading"></span> Processing...';
       btn.disabled = true;
-  
-      setTimeout(() => {
+
+      try {
+        // Prepare data for Google Sheets
+        const bookingData = {
+          name: data.name,
+          phone: data.phone,
+          date: data.date,
+          time: data.time,
+          players: data.players,
+          timestamp: new Date().toISOString(),
+          formattedDate: new Date(data.date).toLocaleDateString(),
+          formattedTime: formatTime12Hour(data.time),
+          rate: getRateTextFromDate(data.date)
+        };
+
+        // Save to Google Sheets
+        await submitToGoogleSheets(bookingData);
+
+        // Wait a moment for user feedback
+        await new Promise(resolve => setTimeout(resolve, 1000));
+
+        // Reset form
         form.reset();
         btn.textContent = original;
         btn.disabled = false;
-  
+
+        // Open WhatsApp
         const playersText = data.players === '1' ? '1 Player' : `${data.players} Players`;
         const formattedTime = formatTime12Hour(data.time);
         const rateText = getRateTextFromDate(data.date);
         const message = `*New Court Booking Request*\n\n*Name:* ${data.name}\n*Phone:* ${data.phone}\n*Date:* ${new Date(data.date).toLocaleDateString()}\n*Time:* ${formattedTime}\n*Rate:* ${rateText}\n*Players:* ${playersText}\n\nPlease confirm this booking.`;
-  
+
         openWhatsApp(message);
-      }, 2000);
+      } catch (error) {
+        console.error('Error processing booking:', error);
+        btn.textContent = original;
+        btn.disabled = false;
+        
+        // Still open WhatsApp even if Google Sheets fails
+        const playersText = data.players === '1' ? '1 Player' : `${data.players} Players`;
+        const formattedTime = formatTime12Hour(data.time);
+        const rateText = getRateTextFromDate(data.date);
+        const message = `*New Court Booking Request*\n\n*Name:* ${data.name}\n*Phone:* ${data.phone}\n*Date:* ${new Date(data.date).toLocaleDateString()}\n*Time:* ${formattedTime}\n*Rate:* ${rateText}\n*Players:* ${playersText}\n\nPlease confirm this booking.`;
+
+        openWhatsApp(message);
+      }
     });
   };
   
