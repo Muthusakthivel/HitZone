@@ -238,28 +238,6 @@ const CONFIG = {
     }
   };
   
-  // ---------- Google Sheets Integration ----------
-  const submitToGoogleSheets = async (bookingData) => {
-    try {
-      // 🔗 REPLACE WITH YOUR GOOGLE SHEETS WEB APP URL
-      const GOOGLE_SHEETS_URL = 'https://script.google.com/a/macros/hitzonesparc.com/s/AKfycbz5aYzAOKZLduxSUkQ00vGHN5VgG8ZXDn8-XRDRtzvmhxS04OMbaUOrDnD048I34VpGQw/exec';
-      
-      const response = await fetch(GOOGLE_SHEETS_URL, {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(bookingData)
-      });
-      
-      console.log('✅ Booking data saved to Google Sheets');
-      return true;
-    } catch (error) {
-      console.error('❌ Error saving to Google Sheets:', error);
-      return false;
-    }
-  };
 
   // ---------- Booking Form ----------
   const initBookingForm = () => {
@@ -300,22 +278,6 @@ const CONFIG = {
       btn.disabled = true;
 
       try {
-        // Prepare data for Google Sheets
-        const bookingData = {
-          name: data.name,
-          phone: data.phone,
-          date: data.date,
-          time: data.time,
-          players: data.players,
-          timestamp: new Date().toISOString(),
-          formattedDate: new Date(data.date).toLocaleDateString(),
-          formattedTime: formatTime12Hour(data.time),
-          rate: getRateTextFromDate(data.date)
-        };
-
-        // Save to Google Sheets
-        await submitToGoogleSheets(bookingData);
-
         // Wait a moment for user feedback
         await new Promise(resolve => setTimeout(resolve, 1000));
 
@@ -336,7 +298,7 @@ const CONFIG = {
         btn.textContent = original;
         btn.disabled = false;
         
-        // Still open WhatsApp even if Google Sheets fails
+        // Still open WhatsApp even if there's an error
         const playersText = data.players === '1' ? '1 Player' : `${data.players} Players`;
         const formattedTime = formatTime12Hour(data.time);
         const rateText = getRateTextFromDate(data.date);
@@ -536,6 +498,7 @@ const CONFIG = {
     return colorMap[color] || ['hz-dot-purple', 'hz-dot-blue', 'hz-dot-green'][index % 3];
   };
   
+
 
   // ---------- Init ----------
   document.addEventListener('DOMContentLoaded', () => {
