@@ -1436,6 +1436,13 @@ section {
     color: var(--hz-cta-primary);
 }
 
+.hz-footer-separator {
+    border: none;
+    border-top: 1px solid #374151;
+    margin: 1.5rem 0;
+    width: 100%;
+}
+
 .hz-footer-bottom {
     text-align: center;
     padding-top: 2rem;

@@ -1,579 +1,696 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="HitZone SPARC - Salem's premier pickleball destination. Book courts, join memberships, host events. State-of-the-art facilities with AI coaching and performance tracking.">
-    <meta name="keywords" content="pickleball, Salem, HitZone SPARC, court booking, membership, sports facility, AI coaching, performance tracking">
-    <meta name="author" content="HitZone SPARC">
-    <meta name="robots" content="index, follow">
-    
-    <!-- Canonical -->
-    <link rel="canonical" href="https://www.hitzonesparc.com/">
+    <head>
+        <meta charset="UTF-8">
+        <meta
+        name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="HitZone SPARC - Premier Pickleball Courts & Community">
-    <meta property="og:description" content="Salem's premier pickleball destination with state-of-the-art courts, AI coaching, and performance tracking.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.hitzonesparc.com/">
-    <meta property="og:image" content="https://www.hitzonesparc.com/assets/images/hz-header.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:site_name" content="HitZone SPARC">
-    
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="HitZone SPARC - Premier Pickleball Courts">
-    <meta name="twitter:description" content="Salem's premier pickleball destination with AI coaching and performance tracking.">
-    <meta name="twitter:image" content="https://www.hitzonesparc.com/assets/images/hz-header.png">
-    
-    <!-- Performance Optimizations -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"></noscript>
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="./assets/images/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="./assets/images/android-chrome-512x512.png">
-    <meta name="theme-color" content="#ffffff">
-    
-    <title>HitZone SPARC - Premier Pickleball Courts & Community | Salem</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-584CM5BPTX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+        <!-- SEO Meta Tags -->
+        <meta name="description" content="HitZone SPARC - Salem's premier pickleball destination. Book courts, join memberships, host events. State-of-the-art facilities with AI coaching and performance tracking.">
+        <meta name="keywords" content="pickleball, Salem, HitZone SPARC, court booking, membership, sports facility, AI coaching, performance tracking">
+        <meta name="author" content="HitZone SPARC">
+        <meta
+        name="robots" content="index, follow">
 
-  gtag('config', 'G-584CM5BPTX');
-</script>
+        <!-- Canonical -->
+        <link
+        rel="canonical" href="https://www.hitzonesparc.com/">
 
-<body>
-    <!-- Skip to main content link for accessibility -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-    
-    <!-- SVG Symbols for Social Media Icons -->
-    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;" aria-hidden="true">
-        <symbol id="hz-yt-icon" viewBox="0 0 30 21" aria-label="YouTube icon">
-            <path d="M29.215 5.071s-.28-1.97-1.139-2.835c-1.088-1.138-2.305-1.144-2.863-1.21-3.995-.29-9.994-.29-9.994-.29h-.011s-5.999 0-9.995.29c-.558.066-1.774.072-2.862 1.21-.86.865-1.133 2.835-1.133 2.835s-.29 2.316-.29 4.626v2.166c0 2.31.284 4.626.284 4.626s.28 1.97 1.133 2.834c1.088 1.139 2.517 1.1 3.153 1.223 2.288.217 9.715.284 9.715.284s6.005-.01 10-.295c.558-.067 1.775-.073 2.863-1.212.86-.864 1.139-2.834 1.139-2.834s.284-2.31.284-4.626V9.697c0-2.31-.284-4.626-.284-4.626Zm-16.954 9.42V6.46l7.718 4.029-7.718 4Z" />
-        </symbol>
-        <symbol id="hz-linkedin-icon" viewBox="0 0 30 30" aria-label="LinkedIn icon">
-            <g clip-path="url(#a)"><path d="M27.1.5H2.751C1.586.5.642 1.42.642 2.56v24.447c0 1.138.944 2.064 2.11 2.064h24.347c1.166 0 2.115-.926 2.115-2.059V2.56c0-1.138-.949-2.059-2.115-2.059ZM9.12 24.847H4.877V11.21H9.12v13.638ZM6.998 9.35a2.457 2.457 0 1 1 0-4.91 2.455 2.455 0 0 1 0 4.91Zm17.99 15.497h-4.235v-6.63c0-1.579-.028-3.615-2.204-3.615-2.204 0-2.54 1.724-2.54 3.504v6.741h-4.229V11.21h4.063v1.864h.055c.564-1.072 1.948-2.205 4.007-2.205 4.291 0 5.084 2.824 5.084 6.496v7.483Z" fill="#fff"/></g><defs><clipPath id="a"><path transform="translate(.643 .5)" d="M0 0h28.571v28.571H0z"/></clipPath></defs>
-        </symbol>
-        <symbol id="hz-insta-icon" viewBox="0 0 30 30" aria-label="Instagram icon">
-            <g clip-path="url(#a)" fill="#fff"><path d="M14.786 3.073c3.817 0 4.269.016 5.77.083 1.395.062 2.148.296 2.65.491.665.257 1.144.57 1.641 1.066.502.502.81.977 1.066 1.64.195.503.43 1.262.491 2.651.067 1.507.084 1.96.084 5.77 0 3.818-.017 4.27-.084 5.77-.061 1.396-.296 2.15-.491 2.651a4.415 4.415 0 0 1-1.066 1.64c-.502.503-.977.81-1.64 1.067-.503.195-1.262.43-2.651.49-1.507.068-1.959.085-5.77.085-3.817 0-4.27-.017-5.77-.084-1.395-.062-2.149-.296-2.651-.491a4.417 4.417 0 0 1-1.64-1.066 4.393 4.393 0 0 1-1.067-1.64c-.195-.503-.43-1.262-.49-2.651-.068-1.507-.084-1.96-.084-5.77 0-3.817.016-4.27.083-5.77.062-1.396.296-2.149.491-2.651a4.418 4.418 0 0 1 1.066-1.64c.503-.503.977-.81 1.641-1.067.502-.195 1.261-.43 2.65-.49 1.502-.068 1.954-.084 5.77-.084Zm0-2.573c-3.879 0-4.364.017-5.888.084-1.517.067-2.561.312-3.465.664A6.973 6.973 0 0 0 2.9 2.9a7 7 0 0 0-1.652 2.527C.896 6.337.65 7.375.584 8.893.517 10.422.5 10.907.5 14.786c0 3.878.017 4.364.084 5.887.067 1.518.312 2.561.664 3.465A6.972 6.972 0 0 0 2.9 26.672a6.983 6.983 0 0 0 2.527 1.646c.91.352 1.948.597 3.466.664 1.523.067 2.009.084 5.887.084 3.879 0 4.364-.017 5.887-.084 1.518-.067 2.562-.312 3.466-.664a6.983 6.983 0 0 0 2.528-1.646 6.983 6.983 0 0 0 1.646-2.528c.352-.91.597-1.948.664-3.465.067-1.524.084-2.01.084-5.888s-.017-4.364-.084-5.887c-.067-1.518-.313-2.561-.664-3.465a6.69 6.69 0 0 0-1.635-2.54 6.983 6.983 0 0 0-2.528-1.646c-.91-.351-1.948-.597-3.465-.664C19.149.517 18.664.5 14.786.5Z"/><path d="M14.785 7.448a7.34 7.34 0 0 0-7.338 7.338 7.34 7.34 0 0 0 7.338 7.338 7.34 7.34 0 0 0 7.339-7.338 7.34 7.34 0 0 0-7.339-7.338Zm0 12.098a4.76 4.76 0 1 1 .002-9.522 4.76 4.76 0 0 1-.002 9.522ZM24.128 7.158a1.714 1.714 0 1 1-3.428-.001 1.714 1.714 0 0 1 3.428 0Z"/></g><defs><clipPath id="a"><path transform="translate(.5 .5)" d="M0 0h28.571v28.571H0z"/></clipPath></defs>
-        </symbol>
-        <symbol id="hz-fb-icon" viewBox="0 0 30 30" aria-label="Facebook icon">
-            <g clip-path="url(#a)"><path d="M15.07.5C7.182.5.786 6.896.786 14.786c0 6.7 4.613 12.32 10.835 13.865v-9.5H8.674v-4.365h2.946v-1.881c0-4.863 2.2-7.116 6.974-7.116.905 0 2.467.177 3.106.354v3.958c-.337-.036-.923-.054-1.65-.054-2.343 0-3.248.888-3.248 3.195v1.544h4.667l-.802 4.365h-3.865v9.816c7.074-.854 12.555-6.877 12.555-14.181C29.357 6.896 22.961.5 15.071.5Z" fill="#fff"/></g><defs><clipPath id="a"><path transform="translate(.785 .5)" d="M0 0h28.571v28.571H0z"/></clipPath></defs>
-        </symbol>
-    </svg>
-    
-    <!-- Navigation -->
-    <nav class="hz-navbar" role="navigation" aria-label="Main navigation">
-        <div class="hz-nav-container">
-            <div class="hz-nav-logo">
-                <a href="#home">
-                    <img src="/assets/images/hz-dark-logo.svg" alt="HitZone SPARC Logo">
-                </a>
-            </div>
-            <ul class="hz-nav-menu" role="menubar">
-                <li role="none"><a href="#home" class="hz-nav-link" role="menuitem" aria-current="page">Home</a></li>
-                <li role="none"><a href="#booking" class="hz-nav-link" role="menuitem">Book Court</a></li>
-                <li role="none"><a href="#membership" class="hz-nav-link" role="menuitem">Membership</a></li>
-                <li role="none"><a href="#amenities" class="hz-nav-link" role="menuitem">Amenities</a></li>
-                <li role="none"><a href="#events" class="hz-nav-link" role="menuitem">Events</a></li>
-            </ul>
-            <div class="hz-hamburger-container">
-            <button class="hz-hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu"></button>
-        </div>
-    </nav>
+        <!-- Open Graph Meta Tags -->
+        <meta property="og:title" content="HitZone SPARC - Premier Pickleball Courts & Community">
+        <meta property="og:description" content="Salem's premier pickleball destination with state-of-the-art courts, AI coaching, and performance tracking.">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://www.hitzonesparc.com/">
+        <meta property="og:image" content="https://www.hitzonesparc.com/assets/images/hz-header.png">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+        <meta
+        property="og:site_name" content="HitZone SPARC">
 
-    <main id="main-content">
-        <!-- Hero Section -->
-        <section id="home" class="hz-hero hz-section-container">
-            <div class="hz-hero-container hz-flex g-30">
-                <div class="hz-hero-content">
-                    <h2 class="hz-hero-title">Welcome to <span class="hz-highlight">HitZone SPARC</span></h2>
-                    <h3 class="hz-hero-subtitle">Play. Compete. Connect.</h3>
-                    <p class="hz-hero-description">
-                        Whether you're a seasoned player or just starting out, HitZone SPARC is where people come together to enjoy the fastest-growing sport in the world – Pickleball!
-                    </p>
-                    <div class="hz-hero-buttons">
-                        <a href="#booking" class="hz-btn hz-btn-primary">Book a Court</a>
-                        <a href="#membership" class="hz-btn hz-btn-secondary">Become a Member</a>
-                    </div>
-                </div>
-                <div class="hz-hero-image">
-                    <img src="/assets/images/hz-header.png" alt="HitZone SPARC pickleball courts with players enjoying the game" loading="eager" width="1200" height="675">
-                </div>
-             </div>
-        </section>
+        <!-- Twitter Card Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="HitZone SPARC - Premier Pickleball Courts">
+        <meta name="twitter:description" content="Salem's premier pickleball destination with AI coaching and performance tracking.">
+        <meta
+        name="twitter:image" content="https://www.hitzonesparc.com/assets/images/hz-header.png">
 
-        <!-- Why Hitzone Section -->
-        <section id="why-hitzone" class="hz-why-section hz-section-container hz-paddingtop-large">
-            <div class="hz-container">
-                <h2 class="hz-section-title scroll-animate fade-up">Why HitZone?</h2>
-                <div class="hz-features-flex">
-                    <article class="hz-feature-card scroll-animate fade-up">
-                        <div class="hz-feature-icon" aria-hidden="true"><img src="/assets/images/hz-premium-court.webp" class="hz-premium-img" alt="Premium Courts"></div>
-                        <h3>Premium Courts</h3>
-                        <p>Enjoy state-of-the-art courts designed for players of all levels – with top-notch surfaces, lighting, and equipment for the perfect game day or night.</p>
-                    </article>
-                    <article class="hz-feature-card scroll-animate fade-up delay-100">
-                        <div class="hz-feature-icon" aria-hidden="true"><img src="/assets/images/hz-friendly-community.webp" class="hz-friendly-img" alt="Friendly Community"></div>
-                        <h3>Friendly Community</h3>
-                        <p>Join a growing community of pickleball enthusiasts. Meet players, make friends, and grow your game in a welcoming environment.</p>
-                    </article>
-                    <article class="hz-feature-card scroll-animate fade-up delay-200">
-                        <div class="hz-feature-icon" aria-hidden="true"><img src="/assets/images/hz-booking.webp" class="hz-booking-img" alt="Flexible Booking"></div>
-                        <h3>Flexible Booking</h3>
-                        <p>Easily book your slot online or walk in when available. Play solo, bring a partner, or join open matches.</p>
-                    </article>
-                    <article class="hz-feature-card scroll-animate fade-up delay-300">
-                        <div class="hz-feature-icon" aria-hidden="true"><img src="/assets/images/hz-training.webp" class="hz-training-img" alt="Training & Events"></div>
-                        <h3>Training & Events</h3>
-                        <p>New to the sport? No problem. Our beginner sessions, coaching clinics, and weekly tournaments help you level up while having fun.</p>
-                    </article>
-                    <article class="hz-feature-card scroll-animate fade-up delay-300">
-                        <div class="hz-feature-icon" aria-hidden="true"><img src="/assets/images/hz-ai-tracking.png" width="100" height="100" alt="AI-Powered Performance Tracking"></div>
-                        <h3>AI-Powered Performance Tracking</h3>
-                        <p>Our smart system tracks your performance — from shot accuracy and speed to movement patterns — providing real-time stats and detailed insights.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
+        <!-- Performance Optimizations -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"></noscript>
 
-        <!-- Booking Section -->
-        <section id="booking" class="hz-booking-section hz-section-container">
-            <div class="hz-container">
-                <h2 class="hz-section-title scroll-animate fade-up">🗓 Book a Court Today</h2>
-                <p class="hz-section-subtitle scroll-animate fade-up delay-100">Experience the thrill of pickleball at Hitzone. Choose your time, invite your crew, and hit the court!</p>
-                
-                <div class="hz-booking-info scroll-animate fade-up delay-200">
-                    <div class="hz-info-item">
-                        <i class="fas fa-clock" aria-hidden="true"></i>
-                        <span>Open daily | 6 AM – 11 PM</span>
-                    </div>
-                    <div class="hz-info-item">
-                        <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
-                        <span>Located in Salem</span>
-                    </div>
-                </div>
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
+        <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon-16x16.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="./assets/images/android-chrome-192x192.png">
+        <link rel="icon" type="image/png" sizes="512x512" href="./assets/images/android-chrome-512x512.png">
+        <meta name="theme-color" content="#ffffff">
 
-                <!-- Inline Price Chip (next to Date) -->
-
-                <div class="hz-booking-form-container scroll-animate fade-up delay-300">
-                    <form class="hz-booking-form" id="bookingForm" novalidate>
-                        <div class="hz-form-group">
-                            <label for="name">Full Name <span aria-label="required">*</span></label>
-                            <input type="text" id="name" name="name" required aria-describedby="name-error" autocomplete="name">
-                            <div id="name-error" class="error-message" role="alert" aria-live="polite"></div>
-                        </div>
-                        <div class="hz-form-group">
-                            <label for="phone">Mobile Number <span aria-label="required">*</span></label>
-                            <input type="tel" id="phone" name="phone" placeholder="Enter 10-digit number" maxlength="15" required aria-describedby="phone-error" autocomplete="tel" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
-                            <div id="phone-error" class="error-message" role="alert" aria-live="polite"></div>
-                        </div>
-                        <div class="hz-form-row">
-                            <div class="hz-form-group">
-                                <label for="date">Date <span aria-label="required">*</span>
-                                  <span id="priceChip" class="hz-price-chip" aria-live="polite">₹600/hour • Weekday</span>
-                                </label>
-                                <input type="date" id="date" name="date" required aria-describedby="date-error">
-                                <div id="date-error" class="error-message" role="alert" aria-live="polite"></div>
-                            </div>
-                            <div class="hz-form-group">
-                                <label for="time">Time <span aria-label="required">*</span></label>
-                                <select id="time" name="time" required aria-describedby="time-error">
-                                    <option value="">Select Time</option>
-                                    <option value="06:00">6:00 AM</option>
-                                    <option value="07:00">7:00 AM</option>
-                                    <option value="08:00">8:00 AM</option>
-                                    <option value="09:00">9:00 AM</option>
-                                    <option value="10:00">10:00 AM</option>
-                                    <option value="11:00">11:00 AM</option>
-                                    <option value="12:00">12:00 PM</option>
-                                    <option value="13:00">1:00 PM</option>
-                                    <option value="14:00">2:00 PM</option>
-                                    <option value="15:00">3:00 PM</option>
-                                    <option value="16:00">4:00 PM</option>
-                                    <option value="17:00">5:00 PM</option>
-                                    <option value="18:00">6:00 PM</option>
-                                    <option value="19:00">7:00 PM</option>
-                                    <option value="20:00">8:00 PM</option>
-                                    <option value="21:00">9:00 PM</option>
-                                </select>
-                                <div id="time-error" class="error-message" role="alert" aria-live="polite"></div>
-                            </div>
-                        </div>
-                        <div class="hz-form-group">
-                            <label for="players">Number of Players <span aria-label="required">*</span></label>
-                            <select id="players" name="players" required aria-describedby="players-error">
-                                <option value="">Select Players</option>
-                                <option value="1">1 Player</option>
-                                <option value="2">2 Players</option>
-                                <option value="3">3 Players</option>
-                                <option value="4">4 Players</option>
-                            </select>
-                            <div id="players-error" class="error-message" role="alert" aria-live="polite"></div>
-                        </div>
-                        <button type="submit" class="hz-btn hz-btn-primary hz-btn-full">Book a Court</button>
-                    </form>
-                </div>
-            </div>
-        </section>
-
-    <!-- First Time Section -->
-    <section id="first-time" class="hz-first-time-section hz-section-container hz-paddingtopbottom-large">
-        <div class="hz-container">
-            <div class="hz-gear-available">
-                <p>Gears Available</p>
-            </div>
-            <div class="hz-first-time-content hz-flex hz-center">
-                <div class="hz-first-time-text scroll-animate fade-left">
-                    <h2>First Time Here?</h2>
-                    <p>No gear? No worries. We've got paddles and balls you can rent or buy. Our staff will help you get started.</p>
-                </div>
-                <div class="hz-flex hz-gears-container">
-                    <div class="hz-first-time-image">
-                        <img src="/assets/images/hz-paddle-gear.png" alt="Pickleball Equipment">
-                    </div>
-                    <div class="hz-first-time-image"><img src="/assets/images/hz-shoe-gear.png" alt="Pickleball Equipment"></div>
-                    <div class="hz-first-time-image"><img src="/assets/images/hz-ball-gear.png" alt="Pickleball Equipment"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Membership Section -->
-    <section id="membership" class="hz-membership-section hz-section-container hz-member-container">
-        <div class="">
-          <h2 class="hz-section-title scroll-animate fade-up">Membership</h2>
-          <p class="hz-section-subtitle scroll-animate fade-up delay-100">Choose the plan that suits your game.</p>
-      
-          <div class="hz-membership-plans-new scroll-animate fade-up delay-200">
-            <!-- Monthly Plan -->
-            <div class="hz-plan-card-new">
-              <div class="hz-plan-badge">Monthly Plan</div>
-              <div class="hz-plan-price">
-                <span class="hz-currency">₹</span>
-                <span class="hz-amount">3,499</span>
-              </div>
-              <p class="hz-plan-description">Ideal for first-time players looking to experience the sport.</p>
-              
-              <ul class="hz-plan-features-new">
-                <li><img src="/assets/images/hz-tick-icon.svg" class="hz-tick-icon" alt="Check"> 30 hours play/month</li>
-                <li><img src="/assets/images/hz-tick-icon.svg" class="hz-tick-icon" alt="Check"> Free Cancellation</li>
-                <li><img src="/assets/images/hz-tick-icon.svg" class="hz-tick-icon" alt="Check"> Rent Free on Paddles & Balls</li>
-                <li class="hz-text-left"><img src="/assets/images/hz-tick-icon.svg" class="hz-tick-icon" alt="Check"> Priority access with guaranteed court availability.</li>                
-              </ul>
-              
-              <div class="hz-plan-button-container">
-                <button class="hz-btn hz-btn-primary hz-whatsapp-btn hz-plan-btn" data-plan="Monthly">
-                  Join Now
-                </button>
-              </div>
-            </div>
-      
-            <!-- Quarterly Plan (Featured) -->
-            <div class="hz-plan-card-new">
-              <div class="hz-plan-badge">3 Months Plan</div>
-              <div class="hz-plan-price">
-                <span class="hz-currency">₹</span>
-                <span class="hz-amount">9,499</span>
-              </div>
-              <div class="hz-plan-save">Save ₹ 1,000</div>
-              <p class="hz-plan-description">An excellent option for frequent players and compact teams.</p>
-              
-              <ul class="hz-plan-features-new">
-                <li><img src="/assets/images/hz-tick-icon.svg" class="hz-tick-icon" alt="Check"> 90 hours play</li>
-                <li><img src="/assets/images/hz-tick-icon.svg" class="hz-tick-icon" alt="Check"> Free Cancellation</li>
-                <li><img src="/assets/images/hz-tick-icon.svg" class="hz-tick-icon" alt="Check"> Rent Free Paddles & Balls</li>
-                <li><img src="/assets/images/hz-tick-icon.svg" class="hz-tick-icon" alt="Check"> 3 Free DUPR Tournament</li>
-                <li><img src="/assets/images/hz-tick-icon.svg" class="hz-tick-icon" alt="Check"> AI Coaching & Match Analytics</li>
-                <li class="hz-text-left"><img src="/assets/images/hz-tick-icon.svg" class="hz-tick-icon" alt="Check"> 30hrs Guest play for an accompanying partner or child</li>
-              </ul>
-              
-              <div class="hz-plan-button-container">
-                <button class="hz-btn hz-btn-primary hz-whatsapp-btn hz-plan-btn" data-plan="Quarterly">
-                  Join Now
-                </button>
-              </div>
-            </div>
-      
-            <!-- Annual Plan -->
-            <div class="hz-plan-card-new">
-              <div class="hz-plan-badge">1 Year Plan</div>
-              <div class="hz-plan-price">
-                <span class="hz-currency">₹</span>
-                <span class="hz-amount">31,999</span>
-              </div>
-              <div class="hz-plan-save">Save ₹ 10,000</div>
-              <p class="hz-plan-description">Designed for passionate players and group competition.</p>
-              
-              <ul class="hz-plan-features-new">
-                <li><img src="/assets/images/hz-tick-icon.svg" class="hz-tick-icon" alt="Check"> 60 hours/month (720 total)</li>
-                <li><img src="/assets/images/hz-tick-icon.svg" class="hz-tick-icon" alt="Check"> Free Cancellation</li>
-                <li><img src="/assets/images/hz-tick-icon.svg" class="hz-tick-icon" alt="Check"> Rent Free Paddles & Balls</li>
-                <li><img src="/assets/images/hz-tick-icon.svg" class="hz-tick-icon" alt="Check"> 1 Free Event</li>
-                <li class="hz-text-left"><img src="/assets/images/hz-tick-icon.svg" class="hz-tick-icon" alt="Check"> AI Coaching, Scoring & Analytics</li>
-                <li><img src="/assets/images/hz-tick-icon.svg" class="hz-tick-icon" alt="Check"> 3 Guest Passes</li>
-                <li><img src="/assets/images/hz-tick-icon.svg" class="hz-tick-icon" alt="Check"> 12 Free DUPR Tournament</li>
-              </ul>
-              
-              <div class="hz-plan-button-container">
-                <button class="hz-btn hz-btn-primary hz-whatsapp-btn hz-plan-btn" data-plan="Annual">
-                  Join Now
-                </button>
-              </div>
-            </div>
-
-            <!-- Lifetime Plan -->
-            <div class="hz-plan-card-new">
-                <!-- <div class="hz-plan-offer-badge best-offer">Best Offer</div> -->
-                <div class="hz-plan-badge">5 Years Plan</div>
-                <div class="hz-plan-price">
-                  <span class="hz-currency">₹</span>
-                  <span class="hz-amount">99,999</span>
-                </div>
-                <div class="hz-plan-save">Save ₹ 60,000</div>
-                <p class="hz-plan-description">The premium plan for committed players.</p>
-                
-                <ul class="hz-plan-features-new">
-                  <li><img src="/assets/images/hz-tick-icon.svg" class="hz-tick-icon" alt="Check"> Unlimited hours/month</li>
-                  <li><img src="/assets/images/hz-tick-icon.svg" class="hz-tick-icon" alt="Check"> Free Cancellation</li>
-                  <li class="hz-text-left"><img src="/assets/images/hz-tick-icon.svg" class="hz-tick-icon" alt="Check"> Unlimited DUPR Tournament entries</li>
-                  <li><img src="/assets/images/hz-tick-icon.svg" class="hz-tick-icon" alt="Check"> Premium AI features</li>
-                  <li><img src="/assets/images/hz-tick-icon.svg" class="hz-tick-icon" alt="Check"> 5 Guest Passes</li>
-                  <li><img src="/assets/images/hz-tick-icon.svg" class="hz-tick-icon" alt="Check"> VIP benefits & rewards</li>
-                </ul>
-                
-                <div class="hz-plan-button-container">
-                  <button class="hz-btn hz-btn-primary hz-whatsapp-btn hz-plan-btn" data-plan="Lifetime">
-                    Join Now
-                  </button>
-                </div>
-              </div>
-            
-          </div>
-        </div>
-      </section>
-      
-      <!-- Tournament Calendar Section -->
-      <section id="tournament-calendar" class="hz-tournament-section hz-section-container hz-paddingtopbottom-large">
-        <div class="hz-container">
-          <h2 class="hz-section-title scroll-animate fade-up">🏆 Tournament Calendar</h2>
-          <p class="hz-section-subtitle scroll-animate fade-up delay-100">Discover all tournament details in one place.</p>
-          
-          <div class="hz-tournament-content hz-flex g-40">
-            
-            <!-- Tournament Table -->
-            <div class="hz-tournament-table scroll-animate fade-right">
-              <div class="hz-table-container">
-                <table class="hz-tournament-table-content">
-                  <thead>
-                    <tr>
-                      <th>EVENT NAME</th>
-                      <th>CLUB NAME</th>
-                      <th>DATE</th>
-                      <th>TIME</th>
-                      <th>LOCATION</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <!-- Tournament data will be loaded dynamically from Google Sheets -->
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-    <!-- Amenities Section -->
-    <section id="amenities" class="hz-amenities-section hz-paddingtopbottom-large">
-        <div class="hz-amenities-container hz-flex">
-            <div class="hz-amenities-content">
-                <h2 class="hz-section-title scroll-animate fade-up">Amenities</h2>
-                <p class="hz-section-subtitle scroll-animate fade-up delay-100">That Elevate Your Game</p>
-            </div>
-            
-            <div class="hz-amenities-flex hz-flex g-20">
-                <div class="hz-amenities-item scroll-animate fade-up hz-center">
-                    <div class="hz-amenities-icon">
-                        <img src="/assets/images/hz-courts.svg" alt="Professional Courts">
-                    </div>
-                    <div class="hz-amenities-text">
-                        <h3>2 Outdoor</h3>
-                        <p>Pickleball Courts</p>
-                    </div>
-                </div>
-
-                <div class="hz-amenities-item scroll-animate fade-up delay-100 hz-center">
-                    <div class="hz-amenities-icon">
-                        <img src="/assets/images/hz-wifi.svg" alt="Wi-Fi Access">
-                    </div>
-                    <div class="hz-amenities-text">
-                        <h3>Wi-Fi</h3>
-                        <p>Access</p>
-                    </div>
-                </div>
-
-                <div class="hz-amenities-item scroll-animate fade-up delay-300 hz-center">
-                    <div class="hz-amenities-icon">
-                        <img src="/assets/images/hz-lounge.svg" alt="Restrooms">
-                    </div>
-                    <div class="hz-amenities-text">
-                        <h3>Lounge</h3>
-                        <p>Access</p>
-                    </div>
-                </div>
-
-                <div class="hz-amenities-item scroll-animate fade-up delay-200 hz-center">
-                    <div class="hz-amenities-icon">
-                        <img src="/assets/images/hz-parking.svg" alt="Cold Beverages">
-                    </div>
-                    <div class="hz-amenities-text">
-                        <h3>Onsite</h3>
-                        <p>Parking</p>
-                    </div>
-                </div>
-
-                <div class="hz-amenities-item scroll-animate fade-up delay-200 hz-center">
-                    <div class="hz-amenities-icon">
-                        <img src="/assets/images/hz-beverages.svg" alt="Cold Beverages">
-                    </div>
-                    <div class="hz-amenities-text">
-                        <h3>Cold</h3>
-                        <p>Beverages</p>
-                    </div>
-                </div>
-
-                <div class="hz-amenities-item scroll-animate fade-up delay-300 hz-center">
-                    <div class="hz-amenities-icon">
-                        <img src="/assets/images/hz-dressing-room.svg" class="hz-dressing-room-icon" alt="Dressing Room">
-                    </div>
-                    <div class="hz-amenities-text">
-                        <h3>Changing</h3>
-                        <p>Room</p>
-                    </div>
-                </div>
-
-                <div class="hz-amenities-item scroll-animate fade-up delay-300 hz-center">
-                    <div class="hz-amenities-icon">
-                        <img src="/assets/images/hz-restrooms.svg" alt="Restrooms" class="hz-restroom-icon">
-                    </div>
-                    <div class="hz-amenities-text">
-                        <h3 class="rest-title">Restrooms</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Events Section -->
-    <section id="events" class="hz-events-section hz-section-container">
-        <div class="hz-container">
-            <h2 class="hz-section-title scroll-animate fade-up">Host an Event</h2>
-            <p class="hz-section-subtitle scroll-animate fade-up delay-100">Planning a birthday bash, corporate outing, or team-building day? Hitzone is the perfect venue!</p>
-            
-            <div class="hz-events-content">
-                <div class="hz-events-text scroll-animate fade-left">
-                    <h3>We offer:</h3>
-                    <ul class="hz-events-list">
-                        <li><img src="/assets/images/hz-tick-icon.svg"  class="hz-tick-icon" alt="Check"> Full or half court rentals for private events</li>
-                        <li><img src="/assets/images/hz-tick-icon.svg" class="hz-tick-icon" alt="Check"> Event coordination and coaching support</li>
-                        <li><img src="/assets/images/hz-tick-icon.svg" class="hz-tick-icon" alt="Check"> Optional catering and customized games</li>
-                        <li><img src="/assets/images/hz-tick-icon.svg" class="hz-tick-icon" alt="Check"> Sound system and decor options</li>
-                    </ul>
-                    <p class="hz-events-note">Let us help you serve up fun for your guests! Contact us to plan your custom pickleball event.</p>
-                    <button class="hz-btn hz-btn-primary hz-whatsapp-btn" data-event="true">Plan Event</button>
-                </div>
-                <div class="hz-events-image scroll-animate fade-right">
-                    <img src="/assets/images/hz-host-event.webp" alt="Event Venue">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="hz-footer">
-        <div class="hz-container">
-            <div class="hz-footer-content">
-                <div class="hz-footer-section">
-                    <h3>Hitzone</h3>
-                    <p>Premier Pickleball Courts & Community</p>
-                    <div class="hz-social-media hz-flex hz-margintop-small" aria-label="HITZONE social links">
-                      
-                        <span class="hz-social-media-item">
-                          <a href="https://www.instagram.com/hitzonesparc" target="_blank" rel="noopener" aria-label="Hitzone on Instagram">
-                            <svg class="hz-icon hz-icon-insta" role="img" aria-hidden="true"><use href="#hz-insta-icon"></use></svg>
-                            <span class="sr-only">Instagram</span>
-                          </a>
-                        </span>
-                      
-                        <span class="hz-social-media-item">
-                          <a href="https://www.linkedin.com/in/hitzone-sparc-568603378/" target="_blank" rel="noopener" aria-label="Hitzone on LinkedIn">
-                            <svg class="hz-icon hz-icon-linkedin" role="img" aria-hidden="true"><use href="#hz-linkedin-icon"></use></svg>
-                            <span class="sr-only">LinkedIn</span>
-                          </a>
-                        </span>
-                      
-                        <span class="hz-social-media-item">
-                          <a href="https://www.youtube.com/@HitZoneSPARC" target="_blank" rel="noopener" aria-label="Hitzone on YouTube">
-                            <svg class="hz-icon hz-icon-yt" role="img" aria-hidden="true"><use href="#hz-yt-icon"></use></svg>
-                            <span class="sr-only">YouTube</span>
-                          </a>
-                        </span>
-                      </div>
-                      
-                </div>
-                <div class="hz-footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a class="hz-footer-link" href="#booking">Book Court</a></li>
-                        <li><a class="hz-footer-link" href="#membership">Membership</a></li>
-                        <li><a class="hz-footer-link" href="#amenities">Amenities</a></li>
-                        <li><a class="hz-footer-link" href="#events">Events</a></li>
-                    </ul>
-                </div>
-                <div class="hz-footer-section">
-                    <h4>Contact Us</h4>
-                    <p><span><a class="hz-footer-link" href="tel:+919444606656">+91 9444606656</a></span></p>
-                    <p><span><a class="hz-footer-link" href="mailto:letsplay@hitzonesparc.com">letsplay@hitzonesparc.com</a></span></p>
-                </div>
-                <div class="hz-footer-section">
-                    <h4>Where We Are</h4>
-                    <div class="hz-map-footer">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3906.7781924499523!2d78.15638247579149!3d11.710116441276847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babf1346ab1d38b%3A0x7500b3b89abddf6e!2sHitZone%20SPARC%20-%20Pickleball%20courts!5e0!3m2!1sen!2sin!4v1754621114807!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                </div>
-            </div>
-            <div class="hz-footer-bottom">
-                <p>&copy; Copyright <strong>Hitzone</strong> All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Floating Back to Top Button -->
-    <!-- <button id="backToTop" class="hz-back-to-top" title="Back to Top">
-        <i class="fas fa-arrow-up"></i>
-    </button> -->
-
-    <script src="script.js"></script>
-    
-    <!-- Chatbase Widget -->
+        <title>HitZone SPARC - Premier Pickleball Courts & Community | Salem</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    </head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-584CM5BPTX"></script>
     <script>
-    (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="4wUoMUeuaUoL8UPrP6iJJ";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-584CM5BPTX');
     </script>
-</body>
+
+    <body>
+        <!-- Skip to main content link for accessibility -->
+        <a href="#main-content" class="skip-link">Skip to main content</a>
+
+        <!-- SVG Symbols for Social Media Icons -->
+        <svg xmlns="http://www.w3.org/2000/svg" style="display: none;" aria-hidden="true">
+            <symbol id="hz-yt-icon" viewbox="0 0 30 21" aria-label="YouTube icon">
+                <path d="M29.215 5.071s-.28-1.97-1.139-2.835c-1.088-1.138-2.305-1.144-2.863-1.21-3.995-.29-9.994-.29-9.994-.29h-.011s-5.999 0-9.995.29c-.558.066-1.774.072-2.862 1.21-.86.865-1.133 2.835-1.133 2.835s-.29 2.316-.29 4.626v2.166c0 2.31.284 4.626.284 4.626s.28 1.97 1.133 2.834c1.088 1.139 2.517 1.1 3.153 1.223 2.288.217 9.715.284 9.715.284s6.005-.01 10-.295c.558-.067 1.775-.073 2.863-1.212.86-.864 1.139-2.834 1.139-2.834s.284-2.31.284-4.626V9.697c0-2.31-.284-4.626-.284-4.626Zm-16.954 9.42V6.46l7.718 4.029-7.718 4Z"/>
+            </symbol>
+            <symbol id="hz-linkedin-icon" viewbox="0 0 30 30" aria-label="LinkedIn icon">
+                <g clip-path="url(#a)"><path d="M27.1.5H2.751C1.586.5.642 1.42.642 2.56v24.447c0 1.138.944 2.064 2.11 2.064h24.347c1.166 0 2.115-.926 2.115-2.059V2.56c0-1.138-.949-2.059-2.115-2.059ZM9.12 24.847H4.877V11.21H9.12v13.638ZM6.998 9.35a2.457 2.457 0 1 1 0-4.91 2.455 2.455 0 0 1 0 4.91Zm17.99 15.497h-4.235v-6.63c0-1.579-.028-3.615-2.204-3.615-2.204 0-2.54 1.724-2.54 3.504v6.741h-4.229V11.21h4.063v1.864h.055c.564-1.072 1.948-2.205 4.007-2.205 4.291 0 5.084 2.824 5.084 6.496v7.483Z" fill="#fff"/></g>
+                <defs>
+                    <clipPath id="a"><path transform="translate(.643 .5)" d="M0 0h28.571v28.571H0z"/></clipPath>
+                </defs>
+            </symbol>
+            <symbol id="hz-insta-icon" viewbox="0 0 30 30" aria-label="Instagram icon">
+                <g clip-path="url(#a)" fill="#fff"><path d="M14.786 3.073c3.817 0 4.269.016 5.77.083 1.395.062 2.148.296 2.65.491.665.257 1.144.57 1.641 1.066.502.502.81.977 1.066 1.64.195.503.43 1.262.491 2.651.067 1.507.084 1.96.084 5.77 0 3.818-.017 4.27-.084 5.77-.061 1.396-.296 2.15-.491 2.651a4.415 4.415 0 0 1-1.066 1.64c-.502.503-.977.81-1.64 1.067-.503.195-1.262.43-2.651.49-1.507.068-1.959.085-5.77.085-3.817 0-4.27-.017-5.77-.084-1.395-.062-2.149-.296-2.651-.491a4.417 4.417 0 0 1-1.64-1.066 4.393 4.393 0 0 1-1.067-1.64c-.195-.503-.43-1.262-.49-2.651-.068-1.507-.084-1.96-.084-5.77 0-3.817.016-4.27.083-5.77.062-1.396.296-2.149.491-2.651a4.418 4.418 0 0 1 1.066-1.64c.503-.503.977-.81 1.641-1.067.502-.195 1.261-.43 2.65-.49 1.502-.068 1.954-.084 5.77-.084Zm0-2.573c-3.879 0-4.364.017-5.888.084-1.517.067-2.561.312-3.465.664A6.973 6.973 0 0 0 2.9 2.9a7 7 0 0 0-1.652 2.527C.896 6.337.65 7.375.584 8.893.517 10.422.5 10.907.5 14.786c0 3.878.017 4.364.084 5.887.067 1.518.312 2.561.664 3.465A6.972 6.972 0 0 0 2.9 26.672a6.983 6.983 0 0 0 2.527 1.646c.91.352 1.948.597 3.466.664 1.523.067 2.009.084 5.887.084 3.879 0 4.364-.017 5.887-.084 1.518-.067 2.562-.312 3.466-.664a6.983 6.983 0 0 0 2.528-1.646 6.983 6.983 0 0 0 1.646-2.528c.352-.91.597-1.948.664-3.465.067-1.524.084-2.01.084-5.888s-.017-4.364-.084-5.887c-.067-1.518-.313-2.561-.664-3.465a6.69 6.69 0 0 0-1.635-2.54 6.983 6.983 0 0 0-2.528-1.646c-.91-.351-1.948-.597-3.465-.664C19.149.517 18.664.5 14.786.5Z"/><path d="M14.785 7.448a7.34 7.34 0 0 0-7.338 7.338 7.34 7.34 0 0 0 7.338 7.338 7.34 7.34 0 0 0 7.339-7.338 7.34 7.34 0 0 0-7.339-7.338Zm0 12.098a4.76 4.76 0 1 1 .002-9.522 4.76 4.76 0 0 1-.002 9.522ZM24.128 7.158a1.714 1.714 0 1 1-3.428-.001 1.714 1.714 0 0 1 3.428 0Z"/></g>
+                <defs>
+                    <clipPath id="a"><path transform="translate(.5 .5)" d="M0 0h28.571v28.571H0z"/></clipPath>
+                </defs>
+            </symbol>
+            <symbol id="hz-fb-icon" viewbox="0 0 30 30" aria-label="Facebook icon">
+                <g clip-path="url(#a)"><path d="M15.07.5C7.182.5.786 6.896.786 14.786c0 6.7 4.613 12.32 10.835 13.865v-9.5H8.674v-4.365h2.946v-1.881c0-4.863 2.2-7.116 6.974-7.116.905 0 2.467.177 3.106.354v3.958c-.337-.036-.923-.054-1.65-.054-2.343 0-3.248.888-3.248 3.195v1.544h4.667l-.802 4.365h-3.865v9.816c7.074-.854 12.555-6.877 12.555-14.181C29.357 6.896 22.961.5 15.071.5Z" fill="#fff"/></g>
+                <defs>
+                    <clipPath id="a"><path transform="translate(.785 .5)" d="M0 0h28.571v28.571H0z"/></clipPath>
+                </defs>
+            </symbol>
+            <symbol id="hz-whatsapp-icon" viewbox="0 0 30 30" aria-label="WhatsApp icon">
+                <g clip-path="url(#whatsapp-clip)"><path d="M15.071 0C6.75 0 0 6.75 0 15.071c0 2.664.69 5.16 1.902 7.33L0 30l7.599-1.902c2.17 1.212 4.666 1.902 7.33 1.902C24.392 30 30 23.392 30 15.071S23.392 0 15.071 0zm0 27.143c-2.17 0-4.212-.565-5.982-1.55l-.425-.212-2.83.708.708-2.83-.212-.425c-.985-1.77-1.55-3.812-1.55-5.982 0-6.637 5.405-12.042 12.042-12.042 6.637 0 12.042 5.405 12.042 12.042 0 6.637-5.405 12.042-12.042 12.042zm6.637-9.106c-.354-.177-2.09-1.03-2.414-1.15-.324-.12-.56-.177-.796.177-.236.354-.919 1.15-1.125 1.386-.207.236-.413.266-.767.09-.354-.177-1.495-.551-2.85-1.757-1.06-.944-1.777-2.12-1.986-2.474-.207-.354-.023-.545.155-.72.16-.16.354-.413.531-.62.177-.207.236-.354.354-.59.118-.236.059-.443-.03-.59-.09-.147-.796-1.92-1.092-2.63-.29-.708-.613-.59-.796-.6-.207-.012-.354-.012-.531-.012-.177 0-.465.03-.708.236-.236.207-.919.9-1.092 2.19-.177 1.29.767 2.544.9 2.72.13.177 1.86 2.83 4.51 3.99.63.28 1.12.447 1.5.572.64.212 1.22.182 1.68.11.51-.09 2.09-.85 2.38-1.68.29-.83.29-1.54.2-1.68-.09-.14-.354-.236-.708-.413z" fill="#fff"/></g>
+                <defs>
+                    <clipPath id="whatsapp-clip"><path transform="translate(0 0)" d="M0 0h30v30H0z"/></clipPath>
+                </defs>
+            </symbol>
+        </svg>
+
+        <!-- Navigation -->
+        <nav class="hz-navbar" role="navigation" aria-label="Main navigation">
+            <div class="hz-nav-container">
+                <div class="hz-nav-logo">
+                    <a href="#home">
+                        <img src="/assets/images/hz-dark-logo.svg" alt="HitZone SPARC Logo">
+                    </a>
+                </div>
+                <ul class="hz-nav-menu" role="menubar">
+                    <li role="none">
+                        <a href="#home" class="hz-nav-link" role="menuitem" aria-current="page">Home</a>
+                    </li>
+                    <li role="none">
+                        <a href="#booking" class="hz-nav-link" role="menuitem">Book Court</a>
+                    </li>
+                    <li role="none">
+                        <a href="#membership" class="hz-nav-link" role="menuitem">Membership</a>
+                    </li>
+                    <li role="none">
+                        <a href="#amenities" class="hz-nav-link" role="menuitem">Amenities</a>
+                    </li>
+                    <li role="none">
+                        <a href="#events" class="hz-nav-link" role="menuitem">Events</a>
+                    </li>
+                </ul>
+                <div class="hz-hamburger-container">
+                    <button class="hz-hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu"></button>
+                </div>
+            </div>
+        </nav>
+
+        <main
+            id="main-content">
+            <!-- Hero Section -->
+            <section id="home" class="hz-hero hz-section-container">
+                <div class="hz-hero-container hz-flex g-30">
+                    <div class="hz-hero-content">
+                        <h2 class="hz-hero-title">Welcome to
+                            <span class="hz-highlight">HitZone SPARC</span>
+                        </h2>
+                        <h3 class="hz-hero-subtitle">Play. Compete. Connect.</h3>
+                        <p class="hz-hero-description">
+                            Whether you're a seasoned player or just starting out, HitZone SPARC is where people come together to enjoy the fastest-growing sport in the world – Pickleball!
+                        </p>
+                        <div class="hz-hero-buttons">
+                            <a href="#booking" class="hz-btn hz-btn-primary">Book a Court</a>
+                            <a href="#membership" class="hz-btn hz-btn-secondary">Become a Member</a>
+                        </div>
+                    </div>
+                    <div class="hz-hero-image">
+                        <img src="/assets/images/hz-header.png" alt="HitZone SPARC pickleball courts with players enjoying the game" loading="eager" width="1200" height="675">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Why Hitzone Section -->
+            <section id="why-hitzone" class="hz-why-section hz-section-container hz-paddingtop-large">
+                <div class="hz-container">
+                    <h2 class="hz-section-title scroll-animate fade-up">Why HitZone?</h2>
+                    <div class="hz-features-flex">
+                        <article class="hz-feature-card scroll-animate fade-up">
+                            <div class="hz-feature-icon" aria-hidden="true"><img src="/assets/images/hz-premium-court.webp" class="hz-premium-img" alt="Premium Courts"></div>
+                            <h3>Premium Courts</h3>
+                            <p>Enjoy state-of-the-art courts designed for players of all levels – with top-notch surfaces, lighting, and equipment for the perfect game day or night.</p>
+                        </article>
+                        <article class="hz-feature-card scroll-animate fade-up delay-100">
+                            <div class="hz-feature-icon" aria-hidden="true"><img src="/assets/images/hz-friendly-community.webp" class="hz-friendly-img" alt="Friendly Community"></div>
+                            <h3>Friendly Community</h3>
+                            <p>Join a growing community of pickleball enthusiasts. Meet players, make friends, and grow your game in a welcoming environment.</p>
+                        </article>
+                        <article class="hz-feature-card scroll-animate fade-up delay-200">
+                            <div class="hz-feature-icon" aria-hidden="true"><img src="/assets/images/hz-booking.webp" class="hz-booking-img" alt="Flexible Booking"></div>
+                            <h3>Flexible Booking</h3>
+                            <p>Easily book your slot online or walk in when available. Play solo, bring a partner, or join open matches.</p>
+                        </article>
+                        <article class="hz-feature-card scroll-animate fade-up delay-300">
+                            <div class="hz-feature-icon" aria-hidden="true"><img src="/assets/images/hz-training.webp" class="hz-training-img" alt="Training & Events"></div>
+                            <h3>Training & Events</h3>
+                            <p>New to the sport? No problem. Our beginner sessions, coaching clinics, and weekly tournaments help you level up while having fun.</p>
+                        </article>
+                        <article class="hz-feature-card scroll-animate fade-up delay-300">
+                            <div class="hz-feature-icon" aria-hidden="true"><img src="/assets/images/hz-ai-tracking.png" width="100" height="100" alt="AI-Powered Performance Tracking"></div>
+                            <h3>AI-Powered Performance Tracking</h3>
+                            <p>Our smart system tracks your performance — from shot accuracy and speed to movement patterns — providing real-time stats and detailed insights.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Booking Section -->
+            <section id="booking" class="hz-booking-section hz-section-container">
+                <div class="hz-container">
+                    <h2 class="hz-section-title scroll-animate fade-up">🗓 Book a Court Today</h2>
+                    <p class="hz-section-subtitle scroll-animate fade-up delay-100">Experience the thrill of pickleball at Hitzone. Choose your time, invite your crew, and hit the court!</p>
+
+                    <div class="hz-booking-info scroll-animate fade-up delay-200">
+                        <div class="hz-info-item">
+                            <i class="fas fa-clock" aria-hidden="true"></i>
+                            <span>Open daily | 6 AM – 11 PM</span>
+                        </div>
+                        <div class="hz-info-item">
+                            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                            <span>Located in Salem</span>
+                        </div>
+                    </div>
+
+                    <!-- Inline Price Chip (next to Date) -->
+
+                    <div class="hz-booking-form-container scroll-animate fade-up delay-300">
+                        <form class="hz-booking-form" id="bookingForm" novalidate>
+                            <div class="hz-form-group">
+                                <label for="name">Full Name
+                                    <span aria-label="required">*</span>
+                                </label>
+                                <input type="text" id="name" name="name" required aria-describedby="name-error" autocomplete="name">
+                                <div id="name-error" class="error-message" role="alert" aria-live="polite"></div>
+                            </div>
+                            <div class="hz-form-group">
+                                <label for="phone">Mobile Number
+                                    <span aria-label="required">*</span>
+                                </label>
+                                <input type="tel" id="phone" name="phone" placeholder="Enter 10-digit number" maxlength="15" required aria-describedby="phone-error" autocomplete="tel" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+                                <div id="phone-error" class="error-message" role="alert" aria-live="polite"></div>
+                            </div>
+                            <div class="hz-form-row">
+                                <div class="hz-form-group">
+                                    <label for="date">Date
+                                        <span aria-label="required">*</span>
+                                        <span id="priceChip" class="hz-price-chip" aria-live="polite">₹600/hour • Weekday</span>
+                                    </label>
+                                    <input type="date" id="date" name="date" required aria-describedby="date-error">
+                                    <div id="date-error" class="error-message" role="alert" aria-live="polite"></div>
+                                </div>
+                                <div class="hz-form-group">
+                                    <label for="time">Time
+                                        <span aria-label="required">*</span>
+                                    </label>
+                                    <select id="time" name="time" required aria-describedby="time-error">
+                                        <option value="">Select Time</option>
+                                        <option value="06:00">6:00 AM</option>
+                                        <option value="07:00">7:00 AM</option>
+                                        <option value="08:00">8:00 AM</option>
+                                        <option value="09:00">9:00 AM</option>
+                                        <option value="10:00">10:00 AM</option>
+                                        <option value="11:00">11:00 AM</option>
+                                        <option value="12:00">12:00 PM</option>
+                                        <option value="13:00">1:00 PM</option>
+                                        <option value="14:00">2:00 PM</option>
+                                        <option value="15:00">3:00 PM</option>
+                                        <option value="16:00">4:00 PM</option>
+                                        <option value="17:00">5:00 PM</option>
+                                        <option value="18:00">6:00 PM</option>
+                                        <option value="19:00">7:00 PM</option>
+                                        <option value="20:00">8:00 PM</option>
+                                        <option value="21:00">9:00 PM</option>
+                                    </select>
+                                    <div id="time-error" class="error-message" role="alert" aria-live="polite"></div>
+                                </div>
+                            </div>
+                            <div class="hz-form-group">
+                                <label for="players">Number of Players
+                                    <span aria-label="required">*</span>
+                                </label>
+                                <select id="players" name="players" required aria-describedby="players-error">
+                                    <option value="">Select Players</option>
+                                    <option value="1">1 Player</option>
+                                    <option value="2">2 Players</option>
+                                    <option value="3">3 Players</option>
+                                    <option value="4">4 Players</option>
+                                </select>
+                                <div id="players-error" class="error-message" role="alert" aria-live="polite"></div>
+                            </div>
+                            <button type="submit" class="hz-btn hz-btn-primary hz-btn-full">Book a Court</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <!-- First Time Section -->
+            <section id="first-time" class="hz-first-time-section hz-section-container hz-paddingtopbottom-large">
+                <div class="hz-container">
+                    <div class="hz-gear-available">
+                        <p>Gears Available</p>
+                    </div>
+                    <div class="hz-first-time-content hz-flex hz-center">
+                        <div class="hz-first-time-text scroll-animate fade-left">
+                            <h2>First Time Here?</h2>
+                            <p>No gear? No worries. We've got paddles and balls you can rent or buy. Our staff will help you get started.</p>
+                        </div>
+                        <div class="hz-flex hz-gears-container">
+                            <div class="hz-first-time-image">
+                                <img src="/assets/images/hz-paddle-gear.png" alt="Pickleball Equipment">
+                            </div>
+                            <div class="hz-first-time-image"><img src="/assets/images/hz-shoe-gear.png" alt="Pickleball Equipment"></div>
+                            <div class="hz-first-time-image"><img src="/assets/images/hz-ball-gear.png" alt="Pickleball Equipment"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Membership Section -->
+            <section id="membership" class="hz-membership-section hz-section-container hz-member-container">
+                <div class="">
+                    <h2 class="hz-section-title scroll-animate fade-up">Membership</h2>
+                    <p class="hz-section-subtitle scroll-animate fade-up delay-100">Choose the plan that suits your game.</p>
+
+                    <div
+                        class="hz-membership-plans-new scroll-animate fade-up delay-200">
+                        <!-- Monthly Plan -->
+                        <div class="hz-plan-card-new">
+                            <div class="hz-plan-badge">Monthly Plan</div>
+                            <div class="hz-plan-price">
+                                <span class="hz-currency">₹</span>
+                                <span class="hz-amount">3,499</span>
+                            </div>
+                            <p class="hz-plan-description">Ideal for first-time players looking to experience the sport.</p>
+
+                            <ul class="hz-plan-features-new">
+                                <li><img src="/assets/images/hz-tick-icon.svg" class="hz-tick-icon" alt="Check">
+                                    30 hours play/month</li>
+                                <li><img src="/assets/images/hz-tick-icon.svg" class="hz-tick-icon" alt="Check">
+                                    Free Cancellation</li>
+                                <li><img src="/assets/images/hz-tick-icon.svg" class="hz-tick-icon" alt="Check">
+                                    Rent Free on Paddles & Balls</li>
+                                <li class="hz-text-left"><img src="/assets/images/hz-tick-icon.svg" class="hz-tick-icon" alt="Check">
+                                    Priority access with guaranteed court availability.</li>
+                            </ul>
+
+                            <div class="hz-plan-button-container">
+                                <button class="hz-btn hz-btn-primary hz-whatsapp-btn hz-plan-btn" data-plan="Monthly">
+                                    Join Now
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Quarterly Plan (Featured) -->
+                        <div class="hz-plan-card-new">
+                            <div class="hz-plan-badge">3 Months Plan</div>
+                            <div class="hz-plan-price">
+                                <span class="hz-currency">₹</span>
+                                <span class="hz-amount">9,499</span>
+                            </div>
+                            <div class="hz-plan-save">Save ₹ 1,000</div>
+                            <p class="hz-plan-description">An excellent option for frequent players and compact teams.</p>
+
+                            <ul class="hz-plan-features-new">
+                                <li><img src="/assets/images/hz-tick-icon.svg" class="hz-tick-icon" alt="Check">
+                                    90 hours play</li>
+                                <li><img src="/assets/images/hz-tick-icon.svg" class="hz-tick-icon" alt="Check">
+                                    Free Cancellation</li>
+                                <li><img src="/assets/images/hz-tick-icon.svg" class="hz-tick-icon" alt="Check">
+                                    Rent Free Paddles & Balls</li>
+                                <li><img src="/assets/images/hz-tick-icon.svg" class="hz-tick-icon" alt="Check">
+                                    3 Free DUPR Tournament</li>
+                                <li><img src="/assets/images/hz-tick-icon.svg" class="hz-tick-icon" alt="Check">
+                                    AI Coaching & Match Analytics</li>
+                                <li class="hz-text-left"><img src="/assets/images/hz-tick-icon.svg" class="hz-tick-icon" alt="Check">
+                                    30hrs Guest play for an accompanying partner or child</li>
+                            </ul>
+
+                            <div class="hz-plan-button-container">
+                                <button class="hz-btn hz-btn-primary hz-whatsapp-btn hz-plan-btn" data-plan="Quarterly">
+                                    Join Now
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Annual Plan -->
+                        <div class="hz-plan-card-new">
+                            <div class="hz-plan-badge">1 Year Plan</div>
+                            <div class="hz-plan-price">
+                                <span class="hz-currency">₹</span>
+                                <span class="hz-amount">31,999</span>
+                            </div>
+                            <div class="hz-plan-save">Save ₹ 10,000</div>
+                            <p class="hz-plan-description">Designed for passionate players and group competition.</p>
+
+                            <ul class="hz-plan-features-new">
+                                <li><img src="/assets/images/hz-tick-icon.svg" class="hz-tick-icon" alt="Check">
+                                    60 hours/month (720 total)</li>
+                                <li><img src="/assets/images/hz-tick-icon.svg" class="hz-tick-icon" alt="Check">
+                                    Free Cancellation</li>
+                                <li><img src="/assets/images/hz-tick-icon.svg" class="hz-tick-icon" alt="Check">
+                                    Rent Free Paddles & Balls</li>
+                                <li><img src="/assets/images/hz-tick-icon.svg" class="hz-tick-icon" alt="Check">
+                                    1 Free Event</li>
+                                <li class="hz-text-left"><img src="/assets/images/hz-tick-icon.svg" class="hz-tick-icon" alt="Check">
+                                    AI Coaching, Scoring & Analytics</li>
+                                <li><img src="/assets/images/hz-tick-icon.svg" class="hz-tick-icon" alt="Check">
+                                    3 Guest Passes</li>
+                                <li><img src="/assets/images/hz-tick-icon.svg" class="hz-tick-icon" alt="Check">
+                                    12 Free DUPR Tournament</li>
+                            </ul>
+
+                            <div class="hz-plan-button-container">
+                                <button class="hz-btn hz-btn-primary hz-whatsapp-btn hz-plan-btn" data-plan="Annual">
+                                    Join Now
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Lifetime Plan -->
+                        <div
+                            class="hz-plan-card-new">
+                            <!-- <div class="hz-plan-offer-badge best-offer">Best Offer</div> -->
+                            <div class="hz-plan-badge">5 Years Plan</div>
+                            <div class="hz-plan-price">
+                                <span class="hz-currency">₹</span>
+                                <span class="hz-amount">99,999</span>
+                            </div>
+                            <div class="hz-plan-save">Save ₹ 60,000</div>
+                            <p class="hz-plan-description">The premium plan for committed players.</p>
+
+                            <ul class="hz-plan-features-new">
+                                <li><img src="/assets/images/hz-tick-icon.svg" class="hz-tick-icon" alt="Check">
+                                    Unlimited hours/month</li>
+                                <li><img src="/assets/images/hz-tick-icon.svg" class="hz-tick-icon" alt="Check">
+                                    Free Cancellation</li>
+                                <li class="hz-text-left"><img src="/assets/images/hz-tick-icon.svg" class="hz-tick-icon" alt="Check">
+                                    Unlimited DUPR Tournament entries</li>
+                                <li><img src="/assets/images/hz-tick-icon.svg" class="hz-tick-icon" alt="Check">
+                                    Premium AI features</li>
+                                <li><img src="/assets/images/hz-tick-icon.svg" class="hz-tick-icon" alt="Check">
+                                    5 Guest Passes</li>
+                                <li><img src="/assets/images/hz-tick-icon.svg" class="hz-tick-icon" alt="Check">
+                                    VIP benefits & rewards</li>
+                            </ul>
+
+                            <div class="hz-plan-button-container">
+                                <button class="hz-btn hz-btn-primary hz-whatsapp-btn hz-plan-btn" data-plan="Lifetime">
+                                    Join Now
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tournament Calendar Section -->
+            <section id="tournament-calendar" class="hz-tournament-section hz-section-container hz-paddingtopbottom-large">
+                <div class="hz-container">
+                    <h2 class="hz-section-title scroll-animate fade-up">🏆 Tournament Calendar</h2>
+                    <p class="hz-section-subtitle scroll-animate fade-up delay-100">Discover all tournament details in one place.</p>
+
+                    <div
+                        class="hz-tournament-content hz-flex g-40">
+
+                        <!-- Tournament Table -->
+                        <div class="hz-tournament-table scroll-animate fade-right">
+                            <div class="hz-table-container">
+                                <table class="hz-tournament-table-content">
+                                    <thead>
+                                        <tr>
+                                            <th>EVENT NAME</th>
+                                            <th>CLUB NAME</th>
+                                            <th>DATE</th>
+                                            <th>TIME</th>
+                                            <th>LOCATION</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- Tournament data will be loaded dynamically from Google Sheets -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Amenities Section -->
+            <section id="amenities" class="hz-amenities-section hz-paddingtopbottom-large">
+                <div class="hz-amenities-container hz-flex">
+                    <div class="hz-amenities-content">
+                        <h2 class="hz-section-title scroll-animate fade-up">Amenities</h2>
+                        <p class="hz-section-subtitle scroll-animate fade-up delay-100">That Elevate Your Game</p>
+                    </div>
+
+                    <div class="hz-amenities-flex hz-flex g-20">
+                        <div class="hz-amenities-item scroll-animate fade-up hz-center">
+                            <div class="hz-amenities-icon">
+                                <img src="/assets/images/hz-courts.svg" alt="Professional Courts">
+                            </div>
+                            <div class="hz-amenities-text">
+                                <h3>2 Outdoor</h3>
+                                <p>Pickleball Courts</p>
+                            </div>
+                        </div>
+
+                        <div class="hz-amenities-item scroll-animate fade-up delay-100 hz-center">
+                            <div class="hz-amenities-icon">
+                                <img src="/assets/images/hz-wifi.svg" alt="Wi-Fi Access">
+                            </div>
+                            <div class="hz-amenities-text">
+                                <h3>Wi-Fi</h3>
+                                <p>Access</p>
+                            </div>
+                        </div>
+
+                        <div class="hz-amenities-item scroll-animate fade-up delay-300 hz-center">
+                            <div class="hz-amenities-icon">
+                                <img src="/assets/images/hz-lounge.svg" alt="Restrooms">
+                            </div>
+                            <div class="hz-amenities-text">
+                                <h3>Lounge</h3>
+                                <p>Access</p>
+                            </div>
+                        </div>
+
+                        <div class="hz-amenities-item scroll-animate fade-up delay-200 hz-center">
+                            <div class="hz-amenities-icon">
+                                <img src="/assets/images/hz-parking.svg" alt="Cold Beverages">
+                            </div>
+                            <div class="hz-amenities-text">
+                                <h3>Onsite</h3>
+                                <p>Parking</p>
+                            </div>
+                        </div>
+
+                        <div class="hz-amenities-item scroll-animate fade-up delay-200 hz-center">
+                            <div class="hz-amenities-icon">
+                                <img src="/assets/images/hz-beverages.svg" alt="Cold Beverages">
+                            </div>
+                            <div class="hz-amenities-text">
+                                <h3>Cold</h3>
+                                <p>Beverages</p>
+                            </div>
+                        </div>
+
+                        <div class="hz-amenities-item scroll-animate fade-up delay-300 hz-center">
+                            <div class="hz-amenities-icon">
+                                <img src="/assets/images/hz-dressing-room.svg" class="hz-dressing-room-icon" alt="Dressing Room">
+                            </div>
+                            <div class="hz-amenities-text">
+                                <h3>Changing</h3>
+                                <p>Room</p>
+                            </div>
+                        </div>
+
+                        <div class="hz-amenities-item scroll-animate fade-up delay-300 hz-center">
+                            <div class="hz-amenities-icon">
+                                <img src="/assets/images/hz-restrooms.svg" alt="Restrooms" class="hz-restroom-icon">
+                            </div>
+                            <div class="hz-amenities-text">
+                                <h3 class="rest-title">Restrooms</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Events Section -->
+            <section id="events" class="hz-events-section hz-section-container">
+                <div class="hz-container">
+                    <h2 class="hz-section-title scroll-animate fade-up">Host an Event</h2>
+                    <p class="hz-section-subtitle scroll-animate fade-up delay-100">Planning a birthday bash, corporate outing, or team-building day? Hitzone is the perfect venue!</p>
+
+                    <div class="hz-events-content">
+                        <div class="hz-events-text scroll-animate fade-left">
+                            <h3>We offer:</h3>
+                            <ul class="hz-events-list">
+                                <li><img src="/assets/images/hz-tick-icon.svg" class="hz-tick-icon" alt="Check">
+                                    Full or half court rentals for private events</li>
+                                <li><img src="/assets/images/hz-tick-icon.svg" class="hz-tick-icon" alt="Check">
+                                    Event coordination and coaching support</li>
+                                <li><img src="/assets/images/hz-tick-icon.svg" class="hz-tick-icon" alt="Check">
+                                    Optional catering and customized games</li>
+                                <li><img src="/assets/images/hz-tick-icon.svg" class="hz-tick-icon" alt="Check">
+                                    Sound system and decor options</li>
+                            </ul>
+                            <p class="hz-events-note">Let us help you serve up fun for your guests! Contact us to plan your custom pickleball event.</p>
+                            <button class="hz-btn hz-btn-primary hz-whatsapp-btn" data-event="true">Plan Event</button>
+                        </div>
+                        <div class="hz-events-image scroll-animate fade-right">
+                            <img src="/assets/images/hz-host-event.webp" alt="Event Venue">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="hz-footer">
+                <div class="hz-container">
+                    <div class="hz-footer-content">
+                        <div class="hz-footer-section">
+                            <h4>Quick Links</h4>
+                            <ul>
+                                <li><a class="hz-footer-link" href="#booking">Book Court</a></li>
+                                <li><a class="hz-footer-link" href="#membership">Membership</a></li>
+                                <li><a class="hz-footer-link" href="#amenities">Amenities</a></li>
+                                <li><a class="hz-footer-link" href="#events">Events</a></li>
+                            </ul>
+                        </div>
+                        <div class="hz-footer-section">
+                            <h4>Contact Us</h4>
+                            <p>
+                                <span>
+                                    <a class="hz-footer-link" href="tel:+919444606656">+91 9444606656</a>
+                                </span>
+                            </p>
+                            <p>
+                                <span>
+                                    <a class="hz-footer-link" href="mailto:letsplay@hitzonesparc.com">letsplay@hitzonesparc.com</a>
+                                </span>
+                            </p>
+                            <hr class="hz-footer-separator">
+                            <div class="hz-social-media hz-flex hz-margintop-small" aria-label="HITZONE social links">
+                                <span class="hz-social-media-item">
+                                    <a href="https://wa.me/919444606656" target="_blank" rel="noopener" aria-label="Hitzone on WhatsApp">
+                                        <svg class="hz-icon hz-icon-whatsapp" role="img" aria-hidden="true">
+                                            <use href="#hz-whatsapp-icon"></use>
+                                        </svg>
+                                        <span class="sr-only">WhatsApp</span>
+                                    </a>
+                                </span>
+                                <span class="hz-social-media-item">
+                                    <a href="https://www.instagram.com/hitzonesparc" target="_blank" rel="noopener" aria-label="Hitzone on Instagram">
+                                        <svg class="hz-icon hz-icon-insta" role="img" aria-hidden="true">
+                                            <use href="#hz-insta-icon"></use>
+                                        </svg>
+                                        <span class="sr-only">Instagram</span>
+                                    </a>
+                                </span>
+                                <span class="hz-social-media-item">
+                                    <a href="https://www.linkedin.com/in/hitzone-sparc-568603378/" target="_blank" rel="noopener" aria-label="Hitzone on LinkedIn">
+                                        <svg class="hz-icon hz-icon-linkedin" role="img" aria-hidden="true">
+                                            <use href="#hz-linkedin-icon"></use>
+                                        </svg>
+                                        <span class="sr-only">LinkedIn</span>
+                                    </a>
+                                </span>
+                                <span class="hz-social-media-item">
+                                    <a href="https://www.youtube.com/@HitZoneSPARC" target="_blank" rel="noopener" aria-label="Hitzone on YouTube">
+                                        <svg class="hz-icon hz-icon-yt" role="img" aria-hidden="true">
+                                            <use href="#hz-yt-icon"></use>
+                                        </svg>
+                                        <span class="sr-only">YouTube</span>
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="hz-footer-section">
+                            <h4>Where We Are</h4>
+                            <div class="hz-map-footer">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3906.7781924499523!2d78.15638247579149!3d11.710116441276847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babf1346ab1d38b%3A0x7500b3b89abddf6e!2sHitZone%20SPARC%20-%20Pickleball%20courts!5e0!3m2!1sen!2sin!4v1754621114807!5m2!1sen!2sin" width="100%" height="450" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen title="HitZone SPARC - Pickleball Courts"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hz-footer-bottom">
+                        <p>&copy; Copyright
+                            <strong>Hitzone</strong>
+                            All rights reserved.</p>
+                    </div>
+                </div>
+            </footer>
+        </main>
+
+        <script src="script.js"></script>
+
+        <!-- Chatbase Widget -->
+        <script>
+            (function () {
+                if (!window.chatbase || window.chatbase("getState") !== "initialized") {
+                    window.chatbase = (...arguments) => {
+                        if (!window.chatbase.q) {
+                            window.chatbase.q = []
+                        }
+                        window.chatbase.q.push(arguments)
+                    };
+                    window.chatbase = new Proxy(window.chatbase, {
+                        get(target, prop) {
+                            if (prop === "q") {
+                                return target.q
+                            }
+                            return(...args) => target(prop, ...args)
+                        }
+                    })
+                }
+                const onLoad = function () {
+                    const script = document.createElement("script");
+                    script.src = "https://www.chatbase.co/embed.min.js";
+                    script.id = "4wUoMUeuaUoL8UPrP6iJJ";
+                    script.domain = "www.chatbase.co";
+                    document.body.appendChild(script)
+                };
+                if (document.readyState === "complete") {
+                    onLoad()
+                } else {
+                    window.addEventListener("load", onLoad)
+                }
+            })();
+        </script>
+    </body>
 </html>
