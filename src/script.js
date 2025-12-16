@@ -380,8 +380,8 @@ const CONFIG = {
       // Parse CSV data
       const tournaments = parseCSV(csvText);
       
-      // Update the tournament cards
-      updateTournamentCards(tournaments);
+      // Update the tournament table
+      updateTournamentTable(tournaments);
       
     } catch (error) {
       console.error('❌ Error loading tournament data from Google Sheets:', error);
@@ -442,103 +442,47 @@ const CONFIG = {
     return tournaments;
   };
 
-  const parseDate = (dateString) => {
-    try {
-      // Try to parse various date formats
-      const date = new Date(dateString);
-      if (isNaN(date.getTime())) {
-        // If standard parsing fails, try manual parsing
-        const parts = dateString.split(/[-\/]/);
-        if (parts.length >= 3) {
-          const year = parseInt(parts[0]) > 1000 ? parseInt(parts[0]) : parseInt(parts[2]);
-          const month = parseInt(parts[1]) - 1;
-          const day = parseInt(parts[0]) > 1000 ? parseInt(parts[2]) : parseInt(parts[0]);
-          return new Date(year, month, day);
-        }
-        return null;
-      }
-      return date;
-    } catch (e) {
-      return null;
-    }
-  };
+  const updateTournamentTable = (tournaments) => {
+    const tableBody = document.querySelector('.hz-tournament-table-content tbody');
+    if (!tableBody) return;
 
-  const formatDateForCard = (dateString) => {
-    const date = parseDate(dateString);
-    if (!date) {
-      // Fallback: try to extract month and day from string
-      const monthMatch = dateString.match(/(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)/i);
-      const dayMatch = dateString.match(/\b(\d{1,2})\b/);
-      return {
-        month: monthMatch ? monthMatch[1].toUpperCase() : 'TBD',
-        day: dayMatch ? dayMatch[1] : '?'
-      };
-    }
-    
-    const months = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
-    return {
-      month: months[date.getMonth()],
-      day: date.getDate().toString()
-    };
-  };
-
-  const updateTournamentCards = (tournaments) => {
-    const container = document.querySelector('.hz-tournament-cards-container');
-    if (!container) return;
-
-    // Clear existing cards
-    container.innerHTML = '';
+    // Clear existing rows
+    tableBody.innerHTML = '';
 
     // Empty state message
     if (!Array.isArray(tournaments) || tournaments.length === 0) {
-      container.innerHTML = `
-        <div class="hz-tournament-empty">
-          <p>No tournaments scheduled at the moment. Please check back soon.</p>
-        </div>
-      `;
+      const row = document.createElement('tr');
+      const cell = document.createElement('td');
+      cell.colSpan = 5;
+      cell.style.textAlign = 'center';
+      cell.style.padding = '1.5rem';
+      cell.textContent = 'No tournaments scheduled at the moment. Please check back soon.';
+      row.appendChild(cell);
+      tableBody.appendChild(row);
       return;
     }
 
-    // Add new tournament cards
+    // Add new tournament rows
     tournaments.forEach((tournament, index) => {
-      const dateInfo = formatDateForCard(tournament.date);
-      const description = tournament.location ? `${tournament.club} • ${tournament.location}` : tournament.club;
-      const timeInfo = tournament.time ? ` • ${tournament.time}` : '';
+      const row = document.createElement('tr');
       
-      const card = document.createElement('div');
-      card.className = 'hz-tournament-card scroll-animate fade-up';
-      if (index > 0) {
-        card.classList.add(`delay-${Math.min(index * 100, 300)}`);
-      }
-      card.innerHTML = `
-        <div class="hz-tournament-card-date">
-          <div class="hz-tournament-month">${dateInfo.month}</div>
-          <div class="hz-tournament-day">${dateInfo.day}</div>
-        </div>
-        <div class="hz-tournament-card-content">
-          <h3 class="hz-tournament-card-title">${tournament.name}</h3>
-          <p class="hz-tournament-card-description">${description}${timeInfo}</p>
-          <a href="#booking" class="hz-tournament-card-link">View Details →</a>
-        </div>
+      const colorClass = getColorClass(tournament.color, index);
+      
+      row.innerHTML = `
+        <td>
+          <div class="hz-tournament-row">
+            <div class="hz-tournament-dot ${colorClass}"></div>
+            <span>${tournament.name}</span>
+          </div>
+        </td>
+        <td>${tournament.club}</td>
+        <td>${tournament.date}</td>
+        <td>${tournament.time}</td>
+        <td>${tournament.location}</td>
       `;
       
-      container.appendChild(card);
+      tableBody.appendChild(row);
     });
-
-    // Trigger scroll animations for newly added cards
-    setTimeout(() => {
-      const cards = container.querySelectorAll('.hz-tournament-card');
-      cards.forEach(card => {
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('animate');
-            }
-          });
-        }, { threshold: 0.1 });
-        observer.observe(card);
-      });
-    }, 100);
   };
 
   const getColorClass = (color, index) => {

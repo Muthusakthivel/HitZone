@@ -440,9 +440,26 @@
                 <div class="hz-container">
                     <h2 class="hz-section-title scroll-animate fade-up">🏆 Tournament Calendar</h2>
                     <p class="hz-section-subtitle scroll-animate fade-up delay-100">Discover all tournament details in one place.</p>
-
-                    <div
-                        class="hz-tournament-cards-container scroll-animate fade-up delay-200"><!-- Tournament cards will be loaded dynamically from Google Sheets -->
+                    <div class="hz-tournament-content hz-flex g-40">
+                        <!-- Tournament Table -->
+                        <div class="hz-tournament-table scroll-animate fade-right">
+                            <div class="hz-table-container">
+                                <table class="hz-tournament-table-content">
+                                    <thead>
+                                        <tr>
+                                            <th>EVENT NAME</th>
+                                            <th>CLUB NAME</th>
+                                            <th>DATE</th>
+                                            <th>TIME</th>
+                                            <th>LOCATION</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- Tournament data will be loaded dynamically from Google Sheets -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
